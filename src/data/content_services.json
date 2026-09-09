@@ -1,0 +1,563 @@
+{
+  "android-development": {
+    "hero": {
+      "title": "Android Application Development",
+      "subtitle": "Build reliable mobile experiences around real operating workflows."
+    },
+    "overview": "Our Android development services focus on creating robust and scalable applications tailored to your business operations. We build mobile experiences that connect your teams, engage your customers, and drive tangible results.",
+    "problem": "Businesses often struggle to translate complex internal workflows into intuitive mobile interfaces, leading to low adoption rates and disconnected operational processes across field and office teams.",
+    "solution": "We design and develop custom Android applications that map directly to your real-world workflows. By utilizing native Android capabilities, we ensure high performance, secure data handling, and seamless integration with your existing backend systems.",
+    "features": [
+      "Native Android architectures designed for high performance.",
+      "Offline-first capabilities for uninterrupted field operations.",
+      "Secure API integrations with existing enterprise systems.",
+      "Custom UI/UX designed specifically for Android Material Design guidelines."
+    ],
+    "benefits": [
+      "Improved field team productivity with on-the-go access to critical tools.",
+      "Higher user adoption rates due to intuitive, platform-native interfaces.",
+      "Enhanced data accuracy with real-time synchronization capabilities.",
+      "Future-proofed applications built on scalable Android frameworks."
+    ],
+    "workflow": [
+      "Requirements Analysis: Mapping your operational workflows to mobile features.",
+      "UI/UX Design: Prototyping intuitive interfaces following Android best practices.",
+      "Agile Development: Iterative coding with continuous client feedback loops.",
+      "Testing & Deployment: Rigorous QA and seamless launch on the Google Play Store."
+    ],
+    "useCases": [
+      "Field service management applications for remote teams.",
+      "Customer-facing mobile storefronts and service portals.",
+      "Internal enterprise resource planning (ERP) mobile extensions."
+    ],
+    "cta": "Ready to mobilize your workforce? Contact us today to discuss your custom Android application needs."
+  },
+  "pwa-development": {
+    "hero": {
+      "title": "Progressive Web Applications",
+      "subtitle": "Ship fast, installable product experiences without a heavy app footprint."
+    },
+    "overview": "Progressive Web Apps (PWAs) deliver app-like experiences directly through the web browser. We build PWAs that offer fast load times, offline functionality, and seamless installation without the friction of app stores.",
+    "problem": "Users are increasingly hesitant to download heavy native applications for occasional use, resulting in lower conversion rates and missed engagement opportunities for businesses.",
+    "solution": "We develop PWAs that bridge the gap between web and mobile. By leveraging service workers and modern web APIs, we create responsive, installable applications that engage users instantly and reliably.",
+    "features": [
+      "App-like navigation and interaction models within the browser.",
+      "Service workers for offline access and background syncing.",
+      "Push notifications to re-engage users directly on their devices.",
+      "Responsive design ensuring optimal display on all screen sizes."
+    ],
+    "benefits": [
+      "Increased user acquisition by eliminating app store download friction.",
+      "Reduced development and maintenance costs with a single codebase.",
+      "Improved performance and load times, even on slow network connections.",
+      "Higher engagement rates through native-like push notifications."
+    ],
+    "workflow": [
+      "Strategy & Planning: Identifying core features that benefit from PWA capabilities.",
+      "Progressive Enhancement: Building the core web experience and layering advanced features.",
+      "Service Worker Implementation: Configuring caching strategies for offline support.",
+      "Audit & Optimization: Testing with Lighthouse and optimizing performance metrics."
+    ],
+    "useCases": [
+      "E-commerce platforms looking to reduce cart abandonment.",
+      "Content-heavy news and media portals requiring offline reading.",
+      "B2B portals needing fast, cross-device accessibility."
+    ],
+    "cta": "Want to reach more users with less friction? Let us build your Progressive Web App today."
+  },
+  "b2b-b2c-platforms": {
+    "hero": {
+      "title": "B2B, B2C & Reseller Platforms",
+      "subtitle": "Design platforms for customers, operators and partner networks."
+    },
+    "overview": "We architect comprehensive platforms that serve diverse user ecosystems, from direct consumers to complex reseller hierarchies. Our solutions orchestrate transactions, manage roles, and scale effortlessly.",
+    "problem": "Managing distinct user types—like consumers, businesses, and resellers—often leads to fragmented systems, inconsistent data, and operational bottlenecks that hinder growth.",
+    "solution": "We build unified platform architectures that centralize operations while offering tailored interfaces and permissions for B2B, B2C, and reseller stakeholders, ensuring cohesive management and scalable distribution.",
+    "features": [
+      "Multi-tenant architecture with granular role-based access control.",
+      "Unified administrative dashboard for cross-segment oversight.",
+      "Dedicated portal interfaces customized for B2B, B2C, and resellers.",
+      "Automated commission and settlement engines for partner networks."
+    ],
+    "benefits": [
+      "Streamlined operations through a centralized management platform.",
+      "Accelerated revenue growth by enabling structured reseller networks.",
+      "Enhanced user satisfaction with tailored experiences for each segment.",
+      "Reduced IT complexity and maintenance costs via unified infrastructure."
+    ],
+    "workflow": [
+      "Ecosystem Modeling: Defining user roles, permissions, and interaction flows.",
+      "Architecture Design: Structuring scalable multi-tenant databases and APIs.",
+      "Interface Development: Building distinct portals for customers, partners, and admins.",
+      "Integration & Launch: Connecting third-party services and rolling out the platform."
+    ],
+    "useCases": [
+      "Multi-level distribution platforms for digital services and recharges.",
+      "Wholesale and retail e-commerce ecosystems.",
+      "SaaS platforms offering white-label reseller programs."
+    ],
+    "cta": "Unify your business operations across all channels. Contact us to architect your comprehensive platform."
+  },
+  "hybrid-development": {
+    "hero": {
+      "title": "Hybrid Application Development",
+      "subtitle": "Extend one product vision across mobile platforms."
+    },
+    "overview": "Our hybrid development services allow you to reach both iOS and Android users with a single, efficient codebase. We deliver consistent, high-performing applications that accelerate your time-to-market.",
+    "problem": "Developing separate native applications for iOS and Android effectively doubles development time, costs, and ongoing maintenance efforts, straining resources for growing businesses.",
+    "solution": "We utilize modern hybrid frameworks like React Native and Flutter to build cross-platform applications. This approach provides near-native performance while significantly reducing development overhead and ensuring feature parity.",
+    "features": [
+      "Single codebase deployment across iOS and Android platforms.",
+      "Near-native performance and fluid animations.",
+      "Access to device-specific hardware features and APIs.",
+      "Hot-reloading capabilities for rapid iteration and updates."
+    ],
+    "benefits": [
+      "Significantly reduced development and maintenance costs.",
+      "Faster time-to-market with simultaneous platform launches.",
+      "Consistent user experience and branding across all devices.",
+      "Easier feature synchronization and update management."
+    ],
+    "workflow": [
+      "Cross-Platform Strategy: Determining the optimal framework based on technical requirements.",
+      "Shared UI/UX Design: Creating a unified design system that adapts to platform norms.",
+      "Component Development: Building reusable modules and integrating native plugins.",
+      "Unified Testing: Comprehensive QA across various iOS and Android devices."
+    ],
+    "useCases": [
+      "Startup MVPs requiring rapid deployment on multiple platforms.",
+      "Consumer-facing applications with uniform feature sets.",
+      "Internal enterprise tools deployed to diverse employee devices."
+    ],
+    "cta": "Ready to conquer both app stores efficiently? Start your hybrid app project with us today."
+  },
+  "mobile-game-development": {
+    "hero": {
+      "title": "Mobile Game Development",
+      "subtitle": "Create polished, responsive game experiences."
+    },
+    "overview": "We bring engaging mobile game concepts to life with stunning graphics, smooth mechanics, and optimized performance. Our team crafts immersive experiences that captivate players and drive monetization.",
+    "problem": "Creating a successful mobile game requires balancing complex logic, high-quality assets, and strict performance constraints, which often leads to buggy releases and poor player retention.",
+    "solution": "Our end-to-end game development process combines robust game engine technology (like Unity or Unreal) with rigorous optimization techniques. We deliver polished, scalable games designed to perform flawlessly across a wide range of mobile devices.",
+    "features": [
+      "Cross-platform game development using industry-leading engines.",
+      "Integration of complex mechanics and responsive physics.",
+      "In-app purchase (IAP) and advertising monetization integrations.",
+      "Backend multiplayer networking and leaderboard infrastructure."
+    ],
+    "benefits": [
+      "High player retention through engaging and fluid gameplay.",
+      "Maximized revenue potential with optimized monetization strategies.",
+      "Broad market reach with games that perform well on diverse hardware.",
+      "Scalable backend systems to support growing player bases."
+    ],
+    "workflow": [
+      "Game Design Document (GDD): Defining core loops, mechanics, and art style.",
+      "Prototyping: Building a playable prototype to test mechanics and fun factor.",
+      "Asset Creation & Coding: Developing art assets and implementing game logic.",
+      "Balancing & Optimization: Refining difficulty curves and optimizing frame rates."
+    ],
+    "useCases": [
+      "Casual and hyper-casual games for broad audience appeal.",
+      "Educational and serious games for corporate training or e-learning.",
+      "Multiplayer competitive games requiring robust server infrastructure."
+    ],
+    "cta": "Turn your game concept into reality. Contact our development studio to start building your next hit game."
+  },
+  "graphic-design": {
+    "hero": {
+      "title": "Graphic & Logo Design",
+      "subtitle": "Give your product a clear visual language."
+    },
+    "overview": "Our graphic design services help establish a strong, memorable brand identity. We craft visual elements that communicate your core values and resonate deeply with your target audience.",
+    "problem": "In a crowded market, generic or inconsistent visual branding makes it difficult to build trust, differentiate from competitors, and leave a lasting impression on potential customers.",
+    "solution": "We provide strategic design services, from foundational logo creation to comprehensive brand guidelines. We ensure every visual touchpoint is distinct, professional, and aligned with your business objectives.",
+    "features": [
+      "Custom logo design with comprehensive file format delivery.",
+      "Development of complete brand identity guidelines (typography, color palettes).",
+      "Creation of marketing collateral (brochures, business cards, banners).",
+      "Digital asset creation optimized for web and social media platforms."
+    ],
+    "benefits": [
+      "Enhanced brand recognition and professional market presence.",
+      "Consistent visual communication across all customer touchpoints.",
+      "Increased customer trust and perceived value of your offerings.",
+      "Clear differentiation from competitors in your industry sector."
+    ],
+    "workflow": [
+      "Discovery & Brief: Understanding your brand values, audience, and market position.",
+      "Concept Generation: Developing initial design directions and mood boards.",
+      "Refinement & Iteration: Narrowing down and polishing chosen concepts based on feedback.",
+      "Finalization & Handoff: Delivering finalized assets and comprehensive brand guidelines."
+    ],
+    "useCases": [
+      "Startup branding and initial visual identity creation.",
+      "Corporate rebranding to modernize and reposition an existing business.",
+      "Ongoing graphic support for digital marketing campaigns."
+    ],
+    "cta": "Build a brand that stands out. Let us create a visual identity that speaks to your audience."
+  },
+  "web-design": {
+    "hero": {
+      "title": "Web Designing Services",
+      "subtitle": "Turn complex offerings into focused digital experiences."
+    },
+    "overview": "We design intuitive, aesthetically pleasing websites focused on user experience and conversion. Our web design services bridge the gap between your brand identity and your digital audience.",
+    "problem": "Poorly designed websites with confusing navigation and outdated aesthetics lead to high bounce rates, frustrated users, and lost revenue opportunities.",
+    "solution": "We utilize user-centric design principles to create engaging, responsive web interfaces. By combining wireframing, UX research, and modern UI design, we deliver websites that inform, guide, and convert visitors efficiently.",
+    "features": [
+      "User-centric UX/UI design utilizing modern design systems.",
+      "Responsive layouts ensuring flawless viewing on mobile, tablet, and desktop.",
+      "Interactive prototyping for stakeholder review and user testing.",
+      "Accessibility compliance (WCAG) to ensure usability for all visitors."
+    ],
+    "benefits": [
+      "Lower bounce rates due to intuitive navigation and engaging layouts.",
+      "Higher conversion rates through strategically placed calls-to-action.",
+      "Improved brand perception with a modern, professional digital presence.",
+      "Enhanced accessibility, expanding your reach to a wider audience."
+    ],
+    "workflow": [
+      "UX Research & Architecture: Mapping user journeys and structuring site information.",
+      "Wireframing: Creating low-fidelity layouts to establish content hierarchy.",
+      "UI Design: Applying brand aesthetics, colors, and typography to high-fidelity mockups.",
+      "Interactive Prototyping: Building clickable prototypes for final approval before development."
+    ],
+    "useCases": [
+      "Corporate websites aimed at lead generation and brand authority.",
+      "SaaS product landing pages designed for high conversion.",
+      "Portfolio and service-based websites showcasing expertise."
+    ],
+    "cta": "Elevate your online presence with a design that converts. Schedule a design consultation today."
+  },
+  "cms-development": {
+    "hero": {
+      "title": "CMS Website Development",
+      "subtitle": "Give teams control of the content they publish."
+    },
+    "overview": "We build robust Content Management System (CMS) websites that empower your marketing and editorial teams. Manage, publish, and scale your content effortlessly without relying on developer intervention.",
+    "problem": "Hard-coded websites create bottlenecks, requiring technical assistance for minor text updates, which slows down marketing campaigns and keeps content stagnant.",
+    "solution": "We implement customized CMS platforms like WordPress, Headless CMS, or custom-built solutions. We tailor the backend interface to match your team workflows, making content updates intuitive, secure, and instant.",
+    "features": [
+      "Custom theme and plugin development for popular CMS platforms.",
+      "Headless CMS architectures (Contentful, Strapi) for omnichannel delivery.",
+      "Intuitive admin dashboards with role-based editing permissions.",
+      "Built-in SEO tools and automated content optimization workflows."
+    ],
+    "benefits": [
+      "Empowered marketing teams capable of independent content management.",
+      "Faster publishing cycles for news, blogs, and promotional pages.",
+      "Reduced ongoing maintenance and development costs.",
+      "Scalable content architecture that grows with your digital presence."
+    ],
+    "workflow": [
+      "Platform Selection: Choosing the right CMS based on technical and editorial needs.",
+      "Architecture & Setup: Structuring content types, taxonomies, and databases.",
+      "Custom Development: Building themes, components, and integrating required plugins.",
+      "Training & Handoff: Educating your team on managing and updating the platform."
+    ],
+    "useCases": [
+      "Corporate blogs and news portals requiring frequent updates.",
+      "E-commerce content strategies blending commerce with editorial content.",
+      "Large enterprise sites requiring complex workflows and approval chains."
+    ],
+    "cta": "Take control of your digital content. Let us build a customized CMS that fits your workflow."
+  },
+  "digital-marketing": {
+    "hero": {
+      "title": "Digital Marketing Solutions",
+      "subtitle": "Connect campaigns to measurable acquisition work."
+    },
+    "overview": "Our comprehensive digital marketing solutions drive targeted traffic, generate leads, and boost conversions. We align data-driven strategies with your business goals to deliver measurable return on investment.",
+    "problem": "Scattered marketing efforts without a cohesive strategy often lead to wasted ad spend, untracked conversions, and a failure to reach the right target demographics.",
+    "solution": "We design integrated marketing campaigns that span search, social, and email channels. By utilizing advanced tracking and analytics, we continuously optimize performance to maximize your acquisition efficiency.",
+    "features": [
+      "Multi-channel campaign strategy covering social, search, and email.",
+      "Advanced analytics integration and custom dashboard reporting.",
+      "Conversion rate optimization (CRO) through A/B testing.",
+      "Targeted audience segmentation and personalized messaging flows."
+    ],
+    "benefits": [
+      "Increased brand visibility across highly relevant digital channels.",
+      "Higher quality lead generation aligned with your ideal customer profile.",
+      "Maximized return on ad spend (ROAS) through continuous optimization.",
+      "Clear visibility into marketing performance via comprehensive reporting."
+    ],
+    "workflow": [
+      "Audit & Strategy: Analyzing current performance and defining KPIs.",
+      "Campaign Setup: Configuring tracking, targeting, and creative assets.",
+      "Execution & Monitoring: Launching campaigns and monitoring real-time data.",
+      "Optimization & Reporting: Adjusting bids, refining creatives, and delivering insights."
+    ],
+    "useCases": [
+      "B2B lead generation campaigns for software and service companies.",
+      "E-commerce sales drives and retargeting campaigns.",
+      "Brand awareness initiatives for new product launches."
+    ],
+    "cta": "Ready to drive measurable growth? Partner with us to scale your digital marketing efforts."
+  },
+  "seo-smo": {
+    "hero": {
+      "title": "SEO & SMO Services",
+      "subtitle": "Improve discoverability with durable content and technical foundations."
+    },
+    "overview": "We enhance your organic online presence through strategic Search Engine Optimization (SEO) and Social Media Optimization (SMO). Build a sustainable traffic pipeline and foster active community engagement.",
+    "problem": "Great products often remain hidden due to poor search rankings and low social visibility, forcing businesses to rely entirely on expensive paid advertising for customer acquisition.",
+    "solution": "We implement comprehensive SEO strategies addressing technical health, content relevance, and authoritative backlinks. Concurrently, our SMO efforts align your social profiles to maximize organic reach and community interaction.",
+    "features": [
+      "In-depth technical SEO audits and continuous site health monitoring.",
+      "Strategic keyword research and on-page content optimization.",
+      "High-quality link building and off-page authority development.",
+      "Social media profile optimization and content calendar management."
+    ],
+    "benefits": [
+      "Sustainable, long-term growth in organic website traffic.",
+      "Reduced dependency on paid advertising for lead generation.",
+      "Enhanced brand authority and trust in search engine results.",
+      "Stronger community engagement and customer loyalty on social platforms."
+    ],
+    "workflow": [
+      "Technical Audit: Identifying and fixing site architecture and crawlability issues.",
+      "Keyword Strategy: Mapping high-intent keywords to specific landing pages.",
+      "Content & Optimization: Creating SEO-rich content and optimizing meta tags.",
+      "Outreach & Engagement: Building backlinks and managing social community interactions."
+    ],
+    "useCases": [
+      "Local businesses aiming to capture regional search traffic.",
+      "Content-heavy sites looking to dominate niche informational queries.",
+      "B2C brands building organic communities on platforms like Instagram or LinkedIn."
+    ],
+    "cta": "Start building sustainable organic traffic today. Request a free SEO audit for your website."
+  },
+  "google-ppc": {
+    "hero": {
+      "title": "Google PPC Services",
+      "subtitle": "Build focused acquisition campaigns around intent."
+    },
+    "overview": "Capture high-intent traffic instantly with expertly managed Google Pay-Per-Click (PPC) campaigns. We optimize your ad spend to deliver qualified leads and maximize your return on investment.",
+    "problem": "Self-managed PPC campaigns often suffer from poor targeting, irrelevant keyword bidding, and unoptimized landing pages, resulting in rapidly depleted budgets with zero measurable return.",
+    "solution": "Our certified PPC specialists architect tightly structured campaigns. Through rigorous keyword management, compelling ad copy, and strategic bidding, we ensure your budget is spent only on users actively seeking your solutions.",
+    "features": [
+      "Comprehensive keyword research, including negative keyword management.",
+      "A/B testing of ad copy to maximize Click-Through Rates (CTR).",
+      "Strategic bidding management tailored to CPA or ROAS goals.",
+      "Landing page optimization recommendations to improve Quality Score."
+    ],
+    "benefits": [
+      "Immediate visibility at the top of search engine results pages.",
+      "Highly controllable budget with predictable lead acquisition costs.",
+      "Agile campaign management allowing quick pivots based on market data.",
+      "Improved overall account health and lower cost-per-click over time."
+    ],
+    "workflow": [
+      "Account Setup & Audit: Structuring campaigns, ad groups, and conversion tracking.",
+      "Keyword & Copy Strategy: Selecting exact/phrase match terms and writing ads.",
+      "Launch & Bid Management: Initiating campaigns and adjusting bids for optimal placement.",
+      "Ongoing Optimization: Trimming wasted spend, testing variations, and scaling winners."
+    ],
+    "useCases": [
+      "Service-based businesses looking for immediate lead generation.",
+      "E-commerce stores running Google Shopping campaigns for product sales.",
+      "B2B software companies targeting niche, high-value industry terms."
+    ],
+    "cta": "Stop wasting your advertising budget. Let our certified experts optimize your Google PPC campaigns."
+  },
+  "web-development": {
+    "hero": {
+      "title": "Website Development",
+      "subtitle": "Build fast, accessible web products for your customers."
+    },
+    "overview": "We engineer high-performance, secure, and scalable web applications. Our web development services transform complex requirements into fast, accessible digital products that serve your business logic.",
+    "problem": "Off-the-shelf templates and bloated codebases result in slow load times, security vulnerabilities, and limited scalability, ultimately hindering business growth and user trust.",
+    "solution": "We develop custom web architectures using modern tech stacks (React, Node, Python). We prioritize clean code, optimal performance, and robust security, ensuring your web product can scale securely with your user base.",
+    "features": [
+      "Custom frontend and backend development tailored to specific logic.",
+      "Implementation of modern, reactive frameworks (React, Vue, Angular).",
+      "Secure RESTful and GraphQL API development and integration.",
+      "Optimized database architecture (SQL and NoSQL) for fast querying."
+    ],
+    "benefits": [
+      "Lightning-fast load times that improve UX and search rankings.",
+      "High security standards protecting sensitive business and user data.",
+      "Seamless scalability to handle traffic spikes and business expansion.",
+      "Ownership of a clean, well-documented, and maintainable codebase."
+    ],
+    "workflow": [
+      "Architecture Planning: Selecting the right tech stack and database schema.",
+      "Backend Development: Building secure APIs and core business logic.",
+      "Frontend Development: Implementing responsive, interactive user interfaces.",
+      "Testing & Deployment: Comprehensive QA, load testing, and CI/CD pipeline setup."
+    ],
+    "useCases": [
+      "Custom SaaS product development and deployment.",
+      "Complex internal dashboards and operational tools.",
+      "High-traffic public-facing web portals and marketplaces."
+    ],
+    "cta": "Ready to build a web product that scales? Discuss your technical requirements with our engineering team."
+  },
+  "linux-windows-hosting": {
+    "hero": {
+      "title": "Linux & Windows Hosting",
+      "subtitle": "Choose hosting operations that match your application needs."
+    },
+    "overview": "Reliable, high-performance hosting environments tailored to your technological stack. Whether you require the open-source flexibility of Linux or the enterprise integration of Windows, we provide secure foundations.",
+    "problem": "Mismatched hosting environments lead to poor application performance, frequent downtimes, and compatibility issues that disrupt business operations and frustrate users.",
+    "solution": "We offer managed Linux and Windows hosting solutions optimized for speed and security. We match your specific application requirements with the right OS, ensuring 99.9% uptime, daily backups, and expert technical support.",
+    "features": [
+      "Choice of premium Linux (cPanel) or Windows (Plesk) server environments.",
+      "Automated daily backups and robust disaster recovery protocols.",
+      "Advanced security configurations including firewalls and DDoS protection.",
+      "24/7 server monitoring and expert technical support."
+    ],
+    "benefits": [
+      "Maximum application uptime and reliable performance.",
+      "Peace of mind with automated data protection and security monitoring.",
+      "Optimized environments tailored specifically for PHP, .NET, or Node apps.",
+      "Reduced internal IT burden with our fully managed support."
+    ],
+    "workflow": [
+      "Requirements Analysis: Assessing your app stack (PHP vs .NET, MySQL vs MSSQL).",
+      "Environment Setup: Configuring the server OS, control panel, and security rules.",
+      "Migration & Testing: Moving your data safely and verifying application functionality.",
+      "Monitoring & Maintenance: Ongoing server patching and uptime monitoring."
+    ],
+    "useCases": [
+      "Hosting standard CMS websites like WordPress or Joomla (Linux).",
+      "Running enterprise applications built on ASP.NET and MSSQL (Windows).",
+      "Secure hosting environments for e-commerce and transactional data."
+    ],
+    "cta": "Ensure your application runs flawlessly. Select the right managed hosting environment today."
+  },
+  "reseller-hosting": {
+    "hero": {
+      "title": "Reseller Hosting",
+      "subtitle": "Create a managed hosting offer for your network."
+    },
+    "overview": "Start your own web hosting business or add value for your agency clients with our white-label reseller hosting. Manage multiple accounts easily under one powerful, centralized dashboard.",
+    "problem": "Agencies and IT professionals struggle to manage hosting for multiple clients across different providers, leading to administrative nightmares and lost opportunities for recurring revenue.",
+    "solution": "Our reseller hosting provides a unified Web Host Manager (WHM) interface, allowing you to allocate resources, create custom hosting packages, and bill clients directly under your own brand, backed by our reliable infrastructure.",
+    "features": [
+      "100% white-label environment with custom branding options.",
+      "Powerful WHM/cPanel access for easy multi-account management.",
+      "Flexible resource allocation to create your own hosting tiers.",
+      "Integrated billing software (WHMCS) compatibility for automated invoicing."
+    ],
+    "benefits": [
+      "Generate a steady stream of recurring revenue under your own brand.",
+      "Streamline client management by consolidating hosting into one dashboard.",
+      "Zero infrastructure maintenance—we handle the server hardware and network.",
+      "Enhanced client retention by offering comprehensive, all-in-one digital services."
+    ],
+    "workflow": [
+      "Account Provisioning: Setting up your master reseller account and nameservers.",
+      "Package Creation: Defining the storage and bandwidth limits for your client tiers.",
+      "Client Onboarding: Creating cPanel accounts and migrating client websites.",
+      "Management & Billing: Monitoring usage and automating client invoicing."
+    ],
+    "useCases": [
+      "Web design agencies providing hosting as an add-on service to clients.",
+      "Entrepreneurs starting a new, white-label web hosting company.",
+      "IT consultants consolidating infrastructure management for multiple small businesses."
+    ],
+    "cta": "Start generating recurring hosting revenue today. Launch your white-label hosting business with us."
+  },
+  "vps-dedicated-hosting": {
+    "hero": {
+      "title": "VPS & Dedicated Hosting",
+      "subtitle": "Scale into more controlled infrastructure."
+    },
+    "overview": "Gain complete control, isolated resources, and maximum performance with our VPS and Dedicated Server hosting. Engineered for high-traffic applications that demand uncompromising reliability and security.",
+    "problem": "As applications scale, shared hosting environments become a bottleneck, leading to sluggish performance, resource limitations, and heightened security risks due to neighboring tenants.",
+    "solution": "We provide Virtual Private Servers (VPS) for scalable, isolated environments, and bare-metal Dedicated Servers for maximum compute power. Both options offer root access, allowing custom configurations tailored exactly to your enterprise needs.",
+    "features": [
+      "Full root/administrator access for complete server customization.",
+      "Guaranteed, isolated resources (CPU, RAM, NVMe Storage).",
+      "Choice of managed or unmanaged support tiers.",
+      "Custom network configurations and dedicated IP addresses."
+    ],
+    "benefits": [
+      "Uncompromising speed and processing power for demanding applications.",
+      "Enhanced security through complete isolation from other users.",
+      "Total flexibility to install custom software and configure server environments.",
+      "Reliable scaling capabilities to handle massive traffic spikes seamlessly."
+    ],
+    "workflow": [
+      "Consultation & Sizing: Determining the exact hardware requirements for your workload.",
+      "Provisioning & Setup: Deploying the server and installing the chosen OS.",
+      "Configuration & Hardening: Applying security protocols and optimizing network settings.",
+      "Deployment & Monitoring: Launching your application with continuous infrastructure monitoring."
+    ],
+    "useCases": [
+      "High-traffic e-commerce platforms requiring stable, fast processing.",
+      "SaaS applications needing strict data isolation and compliance.",
+      "Resource-intensive tasks like gaming servers or big data processing."
+    ],
+    "cta": "Upgrade to enterprise-grade infrastructure. Provision your VPS or Dedicated Server today."
+  },
+  "payin-payout": {
+    "hero": {
+      "title": "Payin and Payout API",
+      "subtitle": "Connect money movement workflows with a clear integration layer."
+    },
+    "overview": "Automate your financial operations with our robust Payin and Payout APIs. Streamline fund collections and orchestrate mass disbursements securely through a single, developer-friendly interface.",
+    "problem": "Handling high volumes of incoming payments and manual payouts creates massive reconciliation headaches, delays in settlements, and increases the risk of human error in financial operations.",
+    "solution": "Our unified API layer automates both collections (payins) via diverse methods and bulk disbursements (payouts) to bank accounts or wallets. We provide real-time webhooks, automated reconciliation, and bank-grade security.",
+    "features": [
+      "Omnichannel payin support (UPI, Cards, Netbanking).",
+      "Instant, bulk payout routing to IMPS, NEFT, RTGS, and wallets.",
+      "Real-time transaction status updates via secure webhooks.",
+      "Automated reconciliation and comprehensive ledger reporting."
+    ],
+    "benefits": [
+      "Dramatically reduced operational overhead for finance and accounting teams.",
+      "Improved vendor and customer satisfaction with instant, reliable payouts.",
+      "Enhanced financial visibility with real-time tracking and automated ledgers.",
+      "Reduced transaction failure rates through intelligent, multi-bank routing."
+    ],
+    "workflow": [
+      "API Integration: Developers connect your systems using our clear documentation.",
+      "Sandbox Testing: Simulating payin and payout flows in a secure test environment.",
+      "Workflow Automation: Configuring routing rules, approval chains, and webhooks.",
+      "Go-Live & Monitoring: Processing real transactions with 24/7 technical support."
+    ],
+    "useCases": [
+      "Marketplaces automating vendor settlements and commission payouts.",
+      "Gig economy platforms disbursing instant wages to workers.",
+      "Lending platforms handling loan disbursements and EMI collections."
+    ],
+    "cta": "Automate your financial flows today. Explore our API documentation and start integrating."
+  },
+  "ecommerce": {
+    "hero": {
+      "title": "E-Commerce Shopping Website",
+      "subtitle": "Build commerce journeys that support catalog to checkout."
+    },
+    "overview": "We develop scalable, high-converting e-commerce platforms tailored to your operational needs. From seamless product discovery to secure checkouts, we build digital storefronts that drive sales and foster loyalty.",
+    "problem": "Clunky e-commerce interfaces with confusing navigation, slow load times, and complex checkout processes lead to high cart abandonment rates and lost revenue.",
+    "solution": "We build custom e-commerce solutions utilizing platforms like Magento, Shopify, or custom headless architectures. We focus on frictionless UX, fast performance, and secure payment integrations to maximize your conversion rates.",
+    "features": [
+      "Custom storefront design optimized for mobile shopping experiences.",
+      "Advanced catalog management with filtering and intelligent search.",
+      "Secure, multi-gateway payment integrations and seamless checkout flows.",
+      "Integrated inventory management and ERP/CRM synchronization."
+    ],
+    "benefits": [
+      "Higher conversion rates driven by optimized, frictionless checkout experiences.",
+      "Increased average order value through intelligent cross-selling features.",
+      "Streamlined back-office operations with automated inventory syncing.",
+      "Scalable architecture capable of handling massive seasonal traffic spikes."
+    ],
+    "workflow": [
+      "Strategy & Platform Selection: Aligning business goals with the right e-commerce technology.",
+      "UX/UI Design: Crafting intuitive product pages and a streamlined cart experience.",
+      "Development & Integration: Building the storefront and connecting payment/shipping APIs.",
+      "Testing & Launch: Conducting security audits, load testing, and go-live deployment."
+    ],
+    "useCases": [
+      "Direct-to-Consumer (D2C) brands scaling their digital retail presence.",
+      "B2B wholesale portals requiring complex pricing tiers and bulk ordering.",
+      "Multi-vendor marketplaces facilitating transactions between independent sellers."
+    ],
+    "cta": "Turn visitors into loyal customers. Let us build your high-converting e-commerce platform."
+  }
+}

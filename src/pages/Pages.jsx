@@ -1,10 +1,23 @@
 import { useEffect, useState } from 'react'
-import { ArrowRight, BarChart3, Check, ChevronDown, Code2, Fingerprint, Mail, MapPin, Phone, ShieldCheck, WalletCards, Zap } from 'lucide-react'
+import { motion, AnimatePresence } from 'framer-motion'
+import { ArrowRight, BarChart3, Check, ChevronDown, Code2, Fingerprint, Mail, MapPin, Phone, ShieldCheck, WalletCards, Zap, Activity } from 'lucide-react'
 import { Link, useParams } from 'react-router-dom'
 import site from '../config/site'
 import { allApis, allSoftware, findCatalogItem, industryItems, serviceItems } from '../data/catalog'
 import { ApiConsole, InfrastructureGraph, NetworkVisualization, ProductMockup, ScrollReveal, SecurityDashboard } from '../components/Visuals'
 import { submitContactForm } from '../utils/contact'
+
+import softwareContent from '../data/content_software.json'
+import apiContent from '../data/content_api.json'
+import servicesContent from '../data/content_services.json'
+import industriesContent from '../data/content_industries.json'
+
+const contentSources = {
+  software: softwareContent,
+  api: apiContent,
+  services: servicesContent,
+  industries: industriesContent
+}
 
 function Seo({ title, description }) {
   useEffect(() => { document.title = `${title} | NTSFINCO`; const meta = document.querySelector('meta[name="description"]') || document.head.appendChild(Object.assign(document.createElement('meta'), { name: 'description' })); meta.setAttribute('content', description) }, [title, description])
@@ -28,7 +41,141 @@ function AboutPage() { return <><Seo title="About" description="Learn how NTSFIN
 
 function PageHero({ eyebrow, title, text, visual }) { return <section className="page-hero"><div className="container page-hero-grid"><div><span className="eyebrow">{eyebrow}</span><h1>{title}</h1><p>{text}</p></div>{visual && <div className="page-hero-visual">{visual}</div>}</div></section> }
 
-function CatalogPage({ type }) { const { slug } = useParams(); const item = findCatalogItem(type, slug); if (!item) return <NotFound />; const isApi = type === 'api'; const isIndustry = type === 'industries'; const related = (type === 'software' ? allSoftware : type === 'api' ? allApis : type === 'services' ? serviceItems : industryItems).filter((entry) => entry.slug !== item.slug).slice(0, 3); return <><Seo title={item.title} description={item.description} /><PageHero eyebrow={`${item.category.toUpperCase()} / ${item.slug.toUpperCase()}`} title={item.title} text={item.description} visual={isApi ? <ApiConsole /> : isIndustry ? <NetworkVisualization /> : <ProductMockup kind={type === 'services' ? 'api' : 'platform'} />} /><section className="section"><div className="container split-grid"><div><SectionIntro eyebrow="THE OPPORTUNITY" title={isApi ? 'A focused integration path for your product.' : isIndustry ? 'Design the workflow around the people using it.' : 'Turn operational complexity into a product advantage.'} text={`Build a more legible ${item.title.toLowerCase()} experience with a foundation that keeps the important details visible.`} /><ul className="check-list"><li><Check size={16} /> Clear states from initiation to outcome</li><li><Check size={16} /> Flexible roles for teams and partners</li><li><Check size={16} /> A foundation ready for measured iteration</li></ul></div><InfrastructureGraph /></div></section><section className="section dark-section"><div className="container"><SectionIntro eyebrow="WORKFLOW" title="A useful system makes the next step obvious." text="Map the handoffs, permissions and outcomes before adding surface complexity." /><div className="workflow-grid">{['Capture the request', 'Validate the context', 'Process the instruction', 'Surface the outcome'].map((step, index) => <div key={step}><span>0{index + 1}</span><h3>{step}</h3><p>{['Start with the intent and the information your user already has.', 'Apply the controls and checks the workflow requires.', 'Route the work through the right service or operating queue.', 'Give people a clear status, record and next action.'][index]}</p></div>)}</div></div></section><section className="section"><div className="container"><SectionIntro eyebrow="WHAT TO EXPLORE NEXT" title="Keep building from the same foundation." /><div className="related-grid">{related.map((entry) => <Link className="related-card" to={entry.route} key={entry.slug}><span className="eyebrow">{entry.category}</span><h3>{entry.title}</h3><p>{entry.description}</p><ArrowRight size={17} /></Link>)}</div></div></section><CtaBand /></> }
+function CatalogPage({ type }) { 
+  const { slug } = useParams()
+  const item = findCatalogItem(type, slug)
+  if (!item) return <NotFound />
+  
+  const content = contentSources[type]?.[slug] || {}
+  
+  const isApi = type === 'api'
+  const isIndustry = type === 'industries'
+  
+  const related = (type === 'software' ? allSoftware : type === 'api' ? allApis : type === 'services' ? serviceItems : industryItems).filter((entry) => entry.slug !== item.slug).slice(0, 3)
+
+  const [faq, setFaq] = useState(0)
+
+  return (
+    <>
+      <Seo title={item.title} description={item.description} />
+      
+      <PageHero 
+        eyebrow={`${item.category.toUpperCase()} / ${item.slug.toUpperCase()}`} 
+        title={content.hero?.title || item.title} 
+        text={content.hero?.subtitle || item.description} 
+        visual={isApi ? <ApiConsole /> : isIndustry ? <NetworkVisualization /> : <ProductMockup kind={type === 'services' ? 'api' : 'platform'} />} 
+      />
+
+      <section className="section">
+        <div className="container split-grid">
+          <ScrollReveal>
+            <SectionIntro eyebrow="OVERVIEW" title={content.overview ? "What is this about?" : "The Opportunity"} text={content.overview || `Build a more legible experience with a foundation that keeps the important details visible.`} />
+            {content.problem && (
+              <div className="problem-box" style={{ padding: '1.5rem', background: 'var(--surface-color)', borderRadius: 'var(--radius)', border: '1px solid var(--border-color)', marginTop: '2rem' }}>
+                <span className="eyebrow" style={{ color: 'var(--error-color)', display: 'flex', alignItems: 'center', gap: '8px' }}><Zap size={14} /> THE CHALLENGE</span>
+                <p style={{ marginTop: '0.5rem', marginBottom: 0, color: 'var(--text-secondary)' }}>{content.problem}</p>
+              </div>
+            )}
+            {content.solution && (
+              <div className="solution-box" style={{ padding: '1.5rem', background: 'var(--surface-color)', borderRadius: 'var(--radius)', border: '1px solid var(--border-color)', marginTop: '1rem' }}>
+                <span className="eyebrow" style={{ color: 'var(--success-color)', display: 'flex', alignItems: 'center', gap: '8px' }}><ShieldCheck size={14} /> OUR SOLUTION</span>
+                <p style={{ marginTop: '0.5rem', marginBottom: 0, color: 'var(--text-secondary)' }}>{content.solution}</p>
+              </div>
+            )}
+          </ScrollReveal>
+          <InfrastructureGraph />
+        </div>
+      </section>
+
+      {content.features && content.features.length > 0 && (
+        <section className="section dark-section">
+          <div className="container">
+            <SectionIntro eyebrow="KEY FEATURES" title="Capabilities that drive results." />
+            <div className="feature-list" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '1.5rem', marginTop: '2rem' }}>
+              {content.features.map((feature, index) => (
+                <motion.div key={index} initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.3, delay: index * 0.1, ease: "easeOut" }} style={{ background: 'rgba(255,255,255,0.05)', padding: '1.5rem', borderRadius: 'var(--radius)' }}>
+                  <span style={{ display: 'block', marginBottom: '1rem', color: 'var(--primary-color)' }}><Code2 size={24} /></span>
+                  <p style={{ margin: 0, fontWeight: 500, lineHeight: 1.5 }}>{feature}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      <section className="section">
+        <div className="container split-grid">
+          <ScrollReveal>
+            <SectionIntro eyebrow="BENEFITS" title="Why choose this solution?" />
+            <ul className="check-list" style={{ marginTop: '2rem' }}>
+              {(content.benefits || ['Clear states from initiation to outcome', 'Flexible roles for teams and partners', 'A foundation ready for measured iteration']).map((benefit, index) => (
+                <li key={index}><Check size={16} /> {benefit}</li>
+              ))}
+            </ul>
+          </ScrollReveal>
+          <ScrollReveal>
+            <div className="workflow-grid" style={{ gridTemplateColumns: '1fr', gap: '1.5rem' }}>
+              <span className="eyebrow">HOW IT WORKS</span>
+              {(content.workflow || ['Capture the request', 'Validate the context', 'Process the instruction', 'Surface the outcome']).map((step, index) => (
+                <motion.div key={index} initial={{ opacity: 0, x: -10 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.3, delay: index * 0.1, ease: "easeOut" }} style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
+                  <span style={{ fontSize: '0.8rem', fontWeight: 700, color: 'var(--primary-color)', opacity: 0.8, paddingTop: '4px' }}>0{index + 1}</span>
+                  <p style={{ margin: 0, color: 'var(--text-secondary)' }}>{step}</p>
+                </motion.div>
+              ))}
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {content.useCases && content.useCases.length > 0 && (
+        <section className="section dark-section">
+          <div className="container">
+            <SectionIntro eyebrow="USE CASES" title="Who is this for?" />
+            <div className="capability-grid" style={{ marginTop: '2rem' }}>
+              {content.useCases.map((useCase, index) => (
+                <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.3, delay: index * 0.1, ease: "easeOut" }} className="capability-card" key={index} style={{ cursor: 'default' }}>
+                  <span className="card-icon"><Activity size={19} /></span>
+                  <h3 style={{ margin: 0, fontSize: '1.1rem' }}>{useCase}</h3>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {content.faq && content.faq.length > 0 && (
+        <section className="section faq-section">
+          <div className="container split-grid">
+            <SectionIntro eyebrow="QUESTIONS, ANSWERED" title="Topic specific details." />
+            <div className="faq-list">
+              {content.faq.map((qna, index) => {
+                const question = qna.q || qna.question;
+                const answer = qna.a || qna.answer;
+                return (
+                  <div className={`faq-item ${faq === index ? 'open' : ''}`} key={index}>
+                    <button onClick={() => setFaq(faq === index ? -1 : index)}>
+                      <span>{question}</span>
+                      <ChevronDown size={17} />
+                    </button>
+                    <AnimatePresence>
+                      {faq === index && (
+                        <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }} exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.25, ease: "easeOut" }} style={{ overflow: 'hidden' }}>
+                          <p style={{ paddingBottom: '20px', margin: 0 }}>{answer}</p>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                )
+              })}
+            </div>
+          </div>
+        </section>
+      )}
+
+      <CtaBand customTitle={content.cta || `Give your next ${item.title} workflow a stronger foundation.`} />
+    </>
+  )
+}
 
 function SoftwareIndex() { return <><Seo title="Software" description="Explore NTSFINCO software platforms for recharge, banking, verification and operations." /><PageHero eyebrow="SOFTWARE SYSTEMS" title="Software that gives financial networks room to move." text="Choose an operating surface for the work your teams already do, then connect it to the rest of your stack." visual={<ProductMockup />} /><CatalogIndex items={allSoftware} /></> }
 function ApiIndex() { return <><Seo title="API Solutions" description="Explore NTSFINCO APIs for recharge, fintech, travel and verification workflows." /><PageHero eyebrow="API SOLUTIONS" title="Financial capabilities, ready to connect." text="Compose the services your product needs with a clear integration model and observable workflow states." visual={<ApiConsole />} /><CatalogIndex items={allApis} /></> }
@@ -38,7 +185,7 @@ function CareerPage() { const roles = [['Product Engineer', 'Product systems', '
 
 function ContactPage() { const [form, setForm] = useState({ name: '', email: '', phone: '', company: '', requirement: '', message: '' }); const [status, setStatus] = useState('idle'); const update = (event) => setForm({ ...form, [event.target.name]: event.target.value }); const submit = async (event) => { event.preventDefault(); setStatus('loading'); try { await submitContactForm(form); setStatus('success') } catch { setStatus('error') } }; return <><Seo title="Contact" description="Talk with NTSFINCO about fintech infrastructure, APIs, software and product engineering." /><PageHero eyebrow="CONTACT NTSFINCO" title="Let's build the next financial experience." text="Tell us what you are trying to connect, improve or launch. We will use the details to make the first conversation useful." visual={<NetworkVisualization />} /><section className="section contact-section"><div className="container contact-grid"><div className="contact-details"><SectionIntro eyebrow="START A CONVERSATION" title="Bring us the messy version." text="A short outline is enough. We can work through the architecture together." />{site.email && <a href={`mailto:${site.email}`}><Mail size={17} />{site.email}</a>}{site.phone && <a href={`tel:${site.phone}`}><Phone size={17} />{site.phone}</a>}{site.address && <span><MapPin size={17} />{site.address}</span>}</div><form className="contact-form" onSubmit={submit}><div className="form-row"><label>Name<input required name="name" value={form.name} onChange={update} /></label><label>Email<input required type="email" name="email" value={form.email} onChange={update} /></label></div><div className="form-row"><label>Phone<input name="phone" value={form.phone} onChange={update} /></label><label>Company<input name="company" value={form.company} onChange={update} /></label></div><label>What are you exploring?<select name="requirement" value={form.requirement} onChange={update}><option value="">Select a focus</option><option>Software platform</option><option>API integration</option><option>Product engineering</option><option>Something else</option></select></label><label>Message<textarea required name="message" rows="5" value={form.message} onChange={update} /></label><button className="button" type="submit" disabled={status === 'loading'}>{status === 'loading' ? 'Preparing...' : 'Send enquiry'} <ArrowRight size={16} /></button>{status === 'success' && <p className="form-success"><Check size={16} /> Your enquiry is ready for a backend connection. No message was sent from this demo.</p>}{status === 'error' && <p className="form-error">Please complete the required fields and try again.</p>}</form></div></section></> }
 
-function CtaBand() { return <section className="cta-band"><div className="container cta-inner"><div><span className="eyebrow">BUILD WITH CLARITY</span><h2>Give your next financial workflow a stronger foundation.</h2></div><Button>Talk to our team</Button></div></section> }
+function CtaBand({ customTitle }) { return <section className="cta-band"><div className="container cta-inner"><div><span className="eyebrow">BUILD WITH CLARITY</span><h2>{customTitle || 'Give your next financial workflow a stronger foundation.'}</h2></div><Button>Talk to our team</Button></div></section> }
 function NotFound() { return <><Seo title="Transaction Not Found" description="The requested NTSFINCO route could not be found." /><section className="not-found"><span className="eyebrow">404 / TRANSACTION NOT FOUND</span><h1>This route did not settle.</h1><p>The page may have moved, but the platform is still here.</p><div className="hero-actions"><Button to="/">Return home</Button><Button to="/software" secondary>Explore platform</Button></div></section></> }
 
 export { AboutPage, ApiIndex, CareerPage, CatalogPage, ContactPage, HomePage, IndustryIndex, NotFound, ServiceIndex, SoftwareIndex }

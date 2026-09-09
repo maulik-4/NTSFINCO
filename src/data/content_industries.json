@@ -1,0 +1,767 @@
+{
+  "recharge-bill-payments": {
+    "hero": {
+      "title": "Recharge & Bill Payments Platforms",
+      "subtitle": "Design resilient everyday payment experiences for broad networks."
+    },
+    "overview": "Our recharge and bill payments infrastructure enables high-volume transaction processing for mobile, DTH, and utility services. Build a dependable ecosystem that handles millions of micro-transactions securely and efficiently.",
+    "problem": "Managing disparate provider APIs, handling downtime, and ensuring instant reconciliation across vast distributor networks creates immense operational overhead.",
+    "solution": "A unified platform that consolidates utility, telecom, and BBPS integrations into a single, reliable operational layer with automated settlement and failure handling.",
+    "features": [
+      "Multi-operator seamless API aggregation",
+      "Real-time transaction status tracking",
+      "Automated commission distribution and settlement",
+      "BBPS-certified biller discovery"
+    ],
+    "benefits": [
+      "Increase transaction success rates",
+      "Reduce manual reconciliation efforts",
+      "Scale distributor and retailer networks faster",
+      "Deliver a frictionless customer experience"
+    ],
+    "workflow": [
+      "Customer initiates a recharge or bill payment request.",
+      "System routes request to the optimal provider gateway.",
+      "Transaction is processed and status is updated in real-time.",
+      "Commissions are calculated and settled to retailer wallets instantly."
+    ],
+    "useCases": [
+      "B2B Retailer Networks",
+      "Consumer Facing (B2C) Portals",
+      "API Reselling Platforms"
+    ],
+    "faq": [
+      {
+        "q": "How do you handle failed transactions?",
+        "a": "Failed transactions are automatically identified and refunded to the user or wallet without manual intervention."
+      },
+      {
+        "q": "Is the platform BBPS compliant?",
+        "a": "Yes, our bill payment solutions fully support Bharat Bill Payment System standards."
+      },
+      {
+        "q": "Can I set custom commission structures?",
+        "a": "Absolutely. You can define specific commission margins for different operators and retailer tiers."
+      },
+      {
+        "q": "How fast is the integration process?",
+        "a": "Our standardized APIs and ready-to-use portals allow for deployment in a matter of days."
+      }
+    ],
+    "cta": "Launch your robust payment network today."
+  },
+  "banking-fintech": {
+    "hero": {
+      "title": "Banking & Fintech Solutions",
+      "subtitle": "Build products around trust, traceability and financial access."
+    },
+    "overview": "Deploy secure, compliant financial software that brings banking services to the edge. We provide the technical foundation for assisted banking, domestic remittance, and cash withdrawal operations.",
+    "problem": "Navigating regulatory compliance, maintaining high security standards, and managing complex multi-party settlements are major barriers to deploying financial products.",
+    "solution": "A comprehensive suite of banking APIs and platforms (AEPS, DMT, Micro ATM) that manages secure connectivity to banking partners while you focus on distribution.",
+    "features": [
+      "AEPS and Micro ATM cash withdrawal integrations",
+      "Secure Domestic Money Transfer (DMT) routing",
+      "Aadhaar Pay merchant payment workflows",
+      "Bank payout and settlement orchestration"
+    ],
+    "benefits": [
+      "Accelerate time-to-market for financial products",
+      "Ensure regulatory compliance and data security",
+      "Expand financial inclusion in unbanked areas",
+      "Streamline complex multi-nodal settlements"
+    ],
+    "workflow": [
+      "Agent captures customer biometric or card data.",
+      "Encrypted request is routed to the nodal bank.",
+      "Bank authorizes transaction and funds are released.",
+      "Agent wallet and bank accounts are automatically reconciled."
+    ],
+    "useCases": [
+      "Assisted Banking Outlets",
+      "Rural Micro-Finance Institutions",
+      "Fintech Service Aggregators"
+    ],
+    "faq": [
+      {
+        "q": "What security standards do you follow?",
+        "a": "We adhere to strict banking-grade encryption, PCI-DSS compliance, and secure biometric tokenization."
+      },
+      {
+        "q": "Can I white-label the AEPS platform?",
+        "a": "Yes, our platforms can be fully branded to match your corporate identity."
+      },
+      {
+        "q": "How reliable is the DMT routing?",
+        "a": "We use intelligent routing across multiple bank APIs to ensure maximum uptime for money transfers."
+      },
+      {
+        "q": "Do you handle the settlement process?",
+        "a": "Our platform automates the payout and settlement records, making reconciliation straightforward."
+      }
+    ],
+    "cta": "Build your fintech foundation with confidence."
+  },
+  "neobanking": {
+    "hero": {
+      "title": "Neo-Banking Platforms",
+      "subtitle": "Compose modern account and money movement experiences."
+    },
+    "overview": "Launch modern banking experiences without the legacy infrastructure. Our neo-banking solutions offer digital-first account management, seamless money movement, and rich financial insights.",
+    "problem": "Legacy banking systems are too rigid and slow to support the dynamic, user-centric experiences demanded by modern consumers and businesses.",
+    "solution": "An API-driven neo-banking core that allows you to construct custom financial products, virtual accounts, and automated money flows quickly.",
+    "features": [
+      "Virtual account creation and management",
+      "Programmable money movement APIs",
+      "Real-time ledger and balance tracking",
+      "Integrated card issuance workflows"
+    ],
+    "benefits": [
+      "Deliver superior digital user experiences",
+      "Operate with low infrastructure overhead",
+      "Iterate financial products rapidly",
+      "Unify disparate financial services"
+    ],
+    "workflow": [
+      "User completes digital onboarding and KYC.",
+      "System provisions a virtual account and digital card.",
+      "User initiates transactions via app or API.",
+      "Platform updates ledger and executes money movement instantly."
+    ],
+    "useCases": [
+      "Digital-first Challenger Banks",
+      "Corporate Spend Management",
+      "Gig Economy Payout Platforms"
+    ],
+    "faq": [
+      {
+        "q": "Do you provide the banking license?",
+        "a": "We provide the technology layer; banking services are offered in partnership with licensed sponsor banks."
+      },
+      {
+        "q": "Can we issue physical cards?",
+        "a": "Yes, our platforms integrate with card printing and issuance partners for both physical and virtual cards."
+      },
+      {
+        "q": "Is the ledger real-time?",
+        "a": "Absolutely, our system maintains a real-time, immutable ledger for all transactions."
+      },
+      {
+        "q": "How customizable is the user interface?",
+        "a": "The platform is highly modular, allowing full customization of the frontend user experience."
+      }
+    ],
+    "cta": "Create the next generation of banking today."
+  },
+  "ecommerce": {
+    "hero": {
+      "title": "E-commerce & Retail Technologies",
+      "subtitle": "Connect commerce operations to payment and customer workflows."
+    },
+    "overview": "Scale your retail business with unified e-commerce platforms that integrate inventory, payment processing, and customer management. We build resilient digital storefronts for ambitious brands.",
+    "problem": "Fragmented systems for inventory, payments, and shipping create disconnected customer experiences and operational bottlenecks.",
+    "solution": "A cohesive e-commerce architecture that synchronizes catalogs, secures checkout processes, and streamlines order fulfillment from end to end.",
+    "features": [
+      "Scalable digital catalog management",
+      "Multi-gateway checkout integration",
+      "Automated order routing and fulfillment tracking",
+      "Integrated customer relationship tools"
+    ],
+    "benefits": [
+      "Drive higher conversion rates",
+      "Simplify multi-channel inventory management",
+      "Enhance post-purchase customer satisfaction",
+      "Scale infrastructure seamlessly during peak events"
+    ],
+    "workflow": [
+      "Customer browses catalog and adds items to cart.",
+      "Secure checkout processes payment and updates inventory.",
+      "Order details are routed to fulfillment centers or dropshippers.",
+      "Tracking information is automatically shared with the customer."
+    ],
+    "useCases": [
+      "Direct-to-Consumer (D2C) Brands",
+      "Multi-vendor Marketplaces",
+      "B2B Wholesale Platforms"
+    ],
+    "faq": [
+      {
+        "q": "Can you integrate with our existing ERP?",
+        "a": "Yes, we build custom integrations to synchronize data with legacy ERP systems."
+      },
+      {
+        "q": "How do you handle high traffic volumes?",
+        "a": "Our platforms use scalable cloud architecture to manage traffic spikes effectively."
+      },
+      {
+        "q": "Are multiple payment gateways supported?",
+        "a": "We integrate multiple payment options to ensure checkout resilience and regional preference."
+      },
+      {
+        "q": "Is the platform mobile-responsive?",
+        "a": "All our e-commerce solutions are built with a mobile-first approach."
+      }
+    ],
+    "cta": "Transform your retail operations online."
+  },
+  "retail": {
+    "hero": {
+      "title": "Retail & Merchant Services",
+      "subtitle": "Give merchant teams the tools to serve customers quickly."
+    },
+    "overview": "Empower physical and omnichannel retailers with advanced Point of Sale (POS) and inventory management systems. Bring visibility and control to your daily retail operations.",
+    "problem": "Disjointed billing, inventory tracking, and customer loyalty programs slow down checkout times and result in inaccurate stock data.",
+    "solution": "An integrated retail management suite that combines POS billing, real-time inventory tracking, and payment acceptance into one unified view.",
+    "features": [
+      "Cloud-based POS and billing software",
+      "Real-time multi-store inventory synchronization",
+      "Integrated digital payments and Aadhaar Pay",
+      "Customer loyalty and purchase history tracking"
+    ],
+    "benefits": [
+      "Accelerate checkout and reduce queues",
+      "Prevent stockouts with accurate inventory data",
+      "Improve staff efficiency and operational visibility",
+      "Build stronger customer relationships"
+    ],
+    "workflow": [
+      "Cashier scans items and system fetches real-time pricing.",
+      "Customer chooses from multiple integrated payment methods.",
+      "Transaction is completed; inventory and ledger update instantly.",
+      "Digital receipt and loyalty points are issued."
+    ],
+    "useCases": [
+      "Supermarkets and Grocery Chains",
+      "Apparel and Specialty Retailers",
+      "Pharmacy and Healthcare Stores"
+    ],
+    "faq": [
+      {
+        "q": "Does the POS work offline?",
+        "a": "Our hybrid POS systems can process basic transactions offline and sync when connectivity returns."
+      },
+      {
+        "q": "Can I manage multiple store locations?",
+        "a": "Yes, our platform provides centralized control over inventory and pricing across all branches."
+      },
+      {
+        "q": "Are barcode scanners supported?",
+        "a": "The software is compatible with standard barcode scanners, receipt printers, and cash drawers."
+      },
+      {
+        "q": "How difficult is staff training?",
+        "a": "We design intuitive interfaces that require minimal training for cashiers and store managers."
+      }
+    ],
+    "cta": "Upgrade your storefront operations today."
+  },
+  "identity-risk": {
+    "hero": {
+      "title": "Identity Verification & Risk",
+      "subtitle": "Make onboarding and review more observable."
+    },
+    "overview": "Protect your business and comply with regulations using our comprehensive identity and risk verification APIs. Streamline KYC processes without sacrificing user experience.",
+    "problem": "Manual identity checks are slow, error-prone, and create high drop-off rates during digital onboarding.",
+    "solution": "An automated verification suite that instantly checks PAN, Aadhaar, GSTIN, and bank accounts, providing immediate confidence in user identity.",
+    "features": [
+      "Real-time PAN and Aadhaar OTP verification",
+      "Bank Account Penny Drop validation",
+      "GSTIN and Business Registration checks",
+      "Automated background verification queues"
+    ],
+    "benefits": [
+      "Reduce onboarding time from days to minutes",
+      "Minimize fraud and identity theft risks",
+      "Ensure continuous regulatory compliance",
+      "Lower operational costs for manual reviews"
+    ],
+    "workflow": [
+      "User submits identity details during onboarding.",
+      "System routes data through relevant verification APIs.",
+      "Instant response validates identity and assesses risk.",
+      "User is either approved, rejected, or flagged for manual review."
+    ],
+    "useCases": [
+      "Fintech and Banking Onboarding",
+      "Gig Economy Worker Verification",
+      "B2B Vendor Due Diligence"
+    ],
+    "faq": [
+      {
+        "q": "Are the verification APIs compliant with data privacy laws?",
+        "a": "Yes, all data handling complies with relevant local regulations and consent frameworks."
+      },
+      {
+        "q": "How accurate is the Penny Drop API?",
+        "a": "The Penny Drop API interacts directly with banking networks for highly accurate account holder name verification."
+      },
+      {
+        "q": "Can we integrate this into our existing app?",
+        "a": "Our RESTful APIs are designed for seamless integration into any existing web or mobile application."
+      },
+      {
+        "q": "What happens if an API service is down?",
+        "a": "We use failover mechanisms and intelligent routing to maintain high availability for verification checks."
+      }
+    ],
+    "cta": "Secure your user onboarding flow."
+  },
+  "b2b": {
+    "hero": {
+      "title": "Business to Business Solutions",
+      "subtitle": "Support partner operations with role-aware product design."
+    },
+    "overview": "Build robust B2B platforms that manage complex hierarchies, partner networks, and wholesale distributions. We engineer systems that handle intricate business rules and large-scale operations.",
+    "problem": "Managing multi-tiered distributor networks involves complex commission structures, fragmented communication, and opaque ledger management.",
+    "solution": "A centralized B2B platform with granular role-based access, automated wallet systems, and clear hierarchical reporting.",
+    "features": [
+      "Multi-tier hierarchy management (Master, Distributor, Retailer)",
+      "Automated commission and margin distribution",
+      "Role-aware dashboards and reporting",
+      "Integrated wallet and ledger operations"
+    ],
+    "benefits": [
+      "Scale partner networks with minimal administrative overhead",
+      "Ensure accurate and transparent commission payouts",
+      "Improve partner engagement and retention",
+      "Maintain clear audit trails for all operations"
+    ],
+    "workflow": [
+      "Master distributor sets margins for lower tiers.",
+      "Retailer performs a transaction on the platform.",
+      "System calculates and distributes commissions instantly.",
+      "Ledgers are updated across the hierarchy in real-time."
+    ],
+    "useCases": [
+      "Telecom Reseller Networks",
+      "FMCG Distribution Chains",
+      "Software API Reselling"
+    ],
+    "faq": [
+      {
+        "q": "How deep can the hierarchy go?",
+        "a": "Our platforms support customizable n-tier architectures depending on your business model."
+      },
+      {
+        "q": "Can partners use their own branding?",
+        "a": "Yes, we support white-labeling capabilities for partners at various levels."
+      },
+      {
+        "q": "Is the wallet system secure?",
+        "a": "Wallets are secured with banking-grade encryption and require dual authentication for critical actions."
+      },
+      {
+        "q": "How do distributors add funds?",
+        "a": "Funds can be loaded via integrated payment gateways or virtual account transfers."
+      }
+    ],
+    "cta": "Empower your distribution network today."
+  },
+  "corporate": {
+    "hero": {
+      "title": "Corporate Sector Technology",
+      "subtitle": "Structure financial workflows for distributed teams."
+    },
+    "overview": "Modernize corporate operations with secure, scalable platforms designed for enterprise workflows. Bring clarity to complex internal processes, expense management, and communication.",
+    "problem": "Distributed corporate teams struggle with siloed data, inefficient approval matrixes, and disconnected financial tools.",
+    "solution": "Tailored enterprise solutions that unify communication, automate expense reconciliation, and integrate seamlessly with legacy corporate systems.",
+    "features": [
+      "Customizable approval workflows and matrixes",
+      "Secure API integration with enterprise ERPs",
+      "Automated corporate payout and expense management",
+      "Centralized identity and access management"
+    ],
+    "benefits": [
+      "Increase operational transparency across departments",
+      "Reduce cycle times for approvals and payouts",
+      "Enhance data security and compliance tracking",
+      "Break down silos between finance and operations"
+    ],
+    "workflow": [
+      "Employee submits an expense or payout request.",
+      "System routes request through predefined corporate approval tiers.",
+      "Approved requests trigger automated API payouts.",
+      "Transactions sync directly to the corporate ERP."
+    ],
+    "useCases": [
+      "Corporate Expense Management",
+      "Vendor Payout Automation",
+      "Internal Workflow Orchestration"
+    ],
+    "faq": [
+      {
+        "q": "Can you integrate with SAP or Oracle?",
+        "a": "Yes, we build middleware and APIs to interface smoothly with major enterprise ERP systems."
+      },
+      {
+        "q": "How customizable are the approval flows?",
+        "a": "Workflows are highly configurable, supporting conditional logic and multi-step authorizations."
+      },
+      {
+        "q": "Is Single Sign-On (SSO) supported?",
+        "a": "We support standard SSO protocols like SAML and OAuth for seamless corporate access."
+      },
+      {
+        "q": "How is corporate data secured?",
+        "a": "We implement strict data isolation, encryption at rest and in transit, and comprehensive audit logs."
+      }
+    ],
+    "cta": "Modernize your corporate operations."
+  },
+  "hrms-payroll": {
+    "hero": {
+      "title": "HRMS & Payroll Platforms",
+      "subtitle": "Build dependable employee and payroll journeys."
+    },
+    "overview": "Simplify human resource management with platforms that handle everything from onboarding to complex payroll calculations. Create a transparent, supportive digital environment for employees.",
+    "problem": "Manual payroll processing and fragmented HR records lead to compliance errors, delayed payments, and poor employee experiences.",
+    "solution": "An integrated HRMS that automates attendance tracking, manages compliance, and executes accurate, timely payroll disbursements.",
+    "features": [
+      "Automated payroll calculation and tax compliance",
+      "Biometric and geo-fenced attendance tracking",
+      "Employee self-service portals and document management",
+      "Integrated bank payout for salary disbursement"
+    ],
+    "benefits": [
+      "Eliminate payroll errors and ensure timely payouts",
+      "Maintain strict adherence to labor and tax regulations",
+      "Reduce HR administrative workload significantly",
+      "Improve employee satisfaction through transparency"
+    ],
+    "workflow": [
+      "System collects daily attendance and leave data.",
+      "End of cycle, payroll engine calculates dues and deductions.",
+      "HR approves the consolidated payroll register.",
+      "Integrated APIs disburse salaries directly to employee accounts."
+    ],
+    "useCases": [
+      "Mid-to-Large Enterprise HR",
+      "Contract Staffing Agencies",
+      "Distributed Workforce Management"
+    ],
+    "faq": [
+      {
+        "q": "Does the system handle local tax compliance?",
+        "a": "Yes, the payroll engine is configurable for regional tax laws and statutory deductions."
+      },
+      {
+        "q": "Can employees view their payslips online?",
+        "a": "Employees have access to a secure portal to view payslips, apply for leave, and update details."
+      },
+      {
+        "q": "Is biometric integration supported?",
+        "a": "We integrate with standard biometric devices for seamless attendance logging."
+      },
+      {
+        "q": "How secure is employee data?",
+        "a": "HR data is stored with high-level encryption and strict role-based access controls."
+      }
+    ],
+    "cta": "Streamline your HR and payroll processes."
+  },
+  "sales-marketing": {
+    "hero": {
+      "title": "Sales & Marketing Technology",
+      "subtitle": "Connect prospect, campaign and revenue workflows."
+    },
+    "overview": "Drive revenue growth with unified CRM and marketing tools. We build platforms that give your teams a clear view of the entire customer lifecycle, from initial touchpoint to closed deal.",
+    "problem": "Disconnected lead sources and disjointed sales tracking result in missed opportunities and unmeasurable marketing ROI.",
+    "solution": "A comprehensive CRM and communication suite that centralizes lead management, automates follow-ups, and tracks campaign performance.",
+    "features": [
+      "Centralized lead and pipeline management",
+      "WhatsApp and SMS API integration for outreach",
+      "Automated follow-up scheduling and alerts",
+      "Real-time campaign analytics and reporting"
+    ],
+    "benefits": [
+      "Increase lead conversion rates with timely follow-ups",
+      "Measure the true ROI of marketing campaigns",
+      "Improve collaboration between sales and marketing teams",
+      "Automate routine communication tasks"
+    ],
+    "workflow": [
+      "Marketing campaigns capture leads via landing pages.",
+      "Leads are automatically scored and routed in the CRM.",
+      "Sales agents receive alerts and initiate omnichannel contact.",
+      "Interactions are logged, providing data for campaign optimization."
+    ],
+    "useCases": [
+      "High-Velocity Sales Teams",
+      "Digital Marketing Agencies",
+      "B2B Lead Generation"
+    ],
+    "faq": [
+      {
+        "q": "Can the CRM integrate with WhatsApp?",
+        "a": "Yes, we deeply integrate WhatsApp Business APIs for seamless customer communication."
+      },
+      {
+        "q": "Is it possible to import existing data?",
+        "a": "We provide bulk import tools to easily migrate data from legacy CRMs or spreadsheets."
+      },
+      {
+        "q": "How customizable are the sales pipelines?",
+        "a": "You can define custom stages, fields, and automation rules to match your sales process."
+      },
+      {
+        "q": "Do you provide marketing services as well?",
+        "a": "Yes, we offer strategic digital marketing, SEO, and PPC services alongside our software solutions."
+      }
+    ],
+    "cta": "Accelerate your sales engine."
+  },
+  "travel": {
+    "hero": {
+      "title": "Travel & Hospitality Platforms",
+      "subtitle": "Compose booking, payment and service experiences."
+    },
+    "overview": "Launch comprehensive travel solutions that connect global inventory with seamless booking experiences. We empower travel businesses with robust APIs and intuitive booking interfaces.",
+    "problem": "Integrating disparate flight, bus, and hotel inventories while maintaining real-time pricing and smooth checkouts is technically demanding.",
+    "solution": "A unified travel booking engine that aggregates multiple APIs, manages markup rules, and provides a frictionless customer booking journey.",
+    "features": [
+      "Aggregated flight, bus, and hotel search APIs",
+      "Dynamic markup and commission management",
+      "Automated ticket generation and PNR tracking",
+      "Integrated secure payment gateways"
+    ],
+    "benefits": [
+      "Offer a wider range of travel options to customers",
+      "Maximize revenue with flexible markup controls",
+      "Reduce booking errors with real-time inventory sync",
+      "Provide instant, automated ticketing experiences"
+    ],
+    "workflow": [
+      "User searches for a travel itinerary on the platform.",
+      "System queries multiple aggregated APIs for real-time pricing.",
+      "User selects an option and completes the payment.",
+      "API issues the ticket and automatically sends confirmation."
+    ],
+    "useCases": [
+      "Online Travel Agencies (OTAs)",
+      "Corporate Travel Desks",
+      "Travel Agent Reseller Portals"
+    ],
+    "faq": [
+      {
+        "q": "Do you provide the travel inventory directly?",
+        "a": "We integrate with leading GDS and aggregators to provide the inventory via our unified APIs."
+      },
+      {
+        "q": "Can I set different markups for B2B and B2C?",
+        "a": "Yes, the platform supports complex markup rules based on user roles and channels."
+      },
+      {
+        "q": "How do you handle booking cancellations?",
+        "a": "Our APIs support cancellation workflows, automatically managing refunds according to supplier policies."
+      },
+      {
+        "q": "Is the booking engine mobile-friendly?",
+        "a": "We design fully responsive portals and can develop dedicated mobile applications."
+      }
+    ],
+    "cta": "Build your ultimate travel booking platform."
+  },
+  "education": {
+    "hero": {
+      "title": "Education Sector Solutions",
+      "subtitle": "Support fee, identity and operational journeys."
+    },
+    "overview": "Digitize educational institution operations with platforms that handle everything from fee collection to student identity management. Create a connected ecosystem for administrators, students, and parents.",
+    "problem": "Institutions struggle with manual fee reconciliation, disjointed communication with parents, and inefficient administrative workflows.",
+    "solution": "A centralized education management platform integrating automated fee collection, structured communication channels, and secure record keeping.",
+    "features": [
+      "Automated fee collection and reconciliation",
+      "Student identity and document verification",
+      "Parent-teacher communication portals",
+      "Digital admission and onboarding workflows"
+    ],
+    "benefits": [
+      "Streamline the entire fee collection process",
+      "Improve communication and transparency with parents",
+      "Reduce administrative burden on school staff",
+      "Maintain secure, accessible digital records"
+    ],
+    "workflow": [
+      "Institution generates fee schedules for students.",
+      "Parents receive automated notifications and payment links.",
+      "Payments are processed and instantly reconciled in the ledger.",
+      "Digital receipts and updated statuses are shared automatically."
+    ],
+    "useCases": [
+      "Schools and Universities",
+      "EdTech Platforms",
+      "Coaching and Training Institutes"
+    ],
+    "faq": [
+      {
+        "q": "Can the system handle partial fee payments?",
+        "a": "Yes, our platforms can be configured to accept installments and track outstanding balances."
+      },
+      {
+        "q": "Is student data kept private?",
+        "a": "We implement stringent data privacy measures to protect sensitive student and academic information."
+      },
+      {
+        "q": "Does it integrate with existing accounting software?",
+        "a": "We can build integrations to sync financial data directly with your preferred accounting tools."
+      },
+      {
+        "q": "Can we run online classes through this?",
+        "a": "While focused on operations, we can integrate third-party virtual classroom APIs seamlessly."
+      }
+    ],
+    "cta": "Digitize your educational institution."
+  },
+  "logistics": {
+    "hero": {
+      "title": "Transportation & Logistics",
+      "subtitle": "Make movement, collection and tracking more connected."
+    },
+    "overview": "Optimize supply chains and fleet operations with connected logistics software. We build systems that provide visibility into shipments, manage resources efficiently, and streamline billing.",
+    "problem": "Lack of real-time tracking, inefficient routing, and paper-based proof of delivery create delays and increase operational costs.",
+    "solution": "A unified logistics platform offering live tracking, automated courier booking integrations, and digital proof of delivery workflows.",
+    "features": [
+      "Courier booking and manifest generation APIs",
+      "Real-time shipment tracking and status updates",
+      "Digital Proof of Delivery (ePOD) capture",
+      "Automated billing and vendor settlement"
+    ],
+    "benefits": [
+      "Gain complete visibility over supply chain movements",
+      "Reduce transit times through optimized routing",
+      "Eliminate disputes with digital delivery verification",
+      "Streamline vendor and driver payments"
+    ],
+    "workflow": [
+      "Order is placed and courier booking API generates a waybill.",
+      "Shipment is dispatched with live tracking enabled.",
+      "Driver captures digital signature upon delivery.",
+      "System updates status and triggers automated settlement."
+    ],
+    "useCases": [
+      "E-commerce Logistics Partners",
+      "Fleet Management Companies",
+      "On-demand Delivery Services"
+    ],
+    "faq": [
+      {
+        "q": "Do you integrate with major courier services?",
+        "a": "Yes, we integrate APIs from leading logistics providers for seamless booking and tracking."
+      },
+      {
+        "q": "How does the digital proof of delivery work?",
+        "a": "Drivers use a mobile app to capture signatures, photos, and geo-coordinates at the delivery point."
+      },
+      {
+        "q": "Can the system handle reverse logistics?",
+        "a": "Absolutely, our workflows support efficient return authorizations and reverse tracking."
+      },
+      {
+        "q": "Is route optimization included?",
+        "a": "We can integrate advanced routing algorithms to optimize delivery paths and save fuel."
+      }
+    ],
+    "cta": "Connect and optimize your supply chain."
+  },
+  "healthcare": {
+    "hero": {
+      "title": "Healthcare Sector Technology",
+      "subtitle": "Design sensitive, permissioned operational workflows."
+    },
+    "overview": "Build secure, compliant healthcare software that improves patient experiences and administrative efficiency. We develop systems that handle sensitive data with the utmost care.",
+    "problem": "Healthcare providers face the complex task of managing patient records, scheduling, and billing while adhering to strict privacy regulations.",
+    "solution": "A cohesive healthcare management system featuring secure appointment booking, digital record keeping, and integrated payment processing.",
+    "features": [
+      "Secure patient appointment scheduling",
+      "Encrypted digital health records management",
+      "Telemedicine API integrations",
+      "Integrated billing and insurance payment flows"
+    ],
+    "benefits": [
+      "Ensure compliance with healthcare data regulations",
+      "Improve patient access to care and information",
+      "Reduce administrative errors in scheduling and billing",
+      "Enable seamless remote consultations"
+    ],
+    "workflow": [
+      "Patient books an appointment via the portal.",
+      "System verifies insurance or collects advance payment.",
+      "Doctor accesses secure records during the consultation.",
+      "Post-visit billing and prescriptions are processed digitally."
+    ],
+    "useCases": [
+      "Clinics and Hospitals",
+      "Telehealth Platforms",
+      "Diagnostic and Pharmacy Chains"
+    ],
+    "faq": [
+      {
+        "q": "Is the software HIPAA compliant?",
+        "a": "We design systems following best practices for healthcare data security and privacy regulations."
+      },
+      {
+        "q": "Can it integrate with lab systems?",
+        "a": "Yes, we build APIs to fetch and update diagnostic reports automatically."
+      },
+      {
+        "q": "How secure is the telemedicine feature?",
+        "a": "Telemedicine integrations utilize end-to-end encrypted video protocols."
+      },
+      {
+        "q": "Do you support insurance claim workflows?",
+        "a": "Our billing modules can be integrated with insurance portals for streamlined claim processing."
+      }
+    ],
+    "cta": "Upgrade your healthcare operations securely."
+  },
+  "manufacturing": {
+    "hero": {
+      "title": "Manufacturing Sector Solutions",
+      "subtitle": "Bring finance and operations closer together."
+    },
+    "overview": "Connect the factory floor to the back office with integrated manufacturing software. We build solutions that synchronize inventory, manage vendor payouts, and optimize production workflows.",
+    "problem": "Disconnected systems between procurement, production, and finance lead to inventory blind spots and delayed vendor payments.",
+    "solution": "An integrated operational platform that tracks raw materials, orchestrates vendor payments, and provides real-time visibility into production costs.",
+    "features": [
+      "End-to-end inventory and supply chain tracking",
+      "Automated vendor payout and settlement APIs",
+      "Production workflow and status monitoring",
+      "Real-time operational dashboards"
+    ],
+    "benefits": [
+      "Prevent production halts with better inventory foresight",
+      "Build stronger vendor relationships with timely payouts",
+      "Identify bottlenecks in the production process",
+      "Reduce manual data entry between departments"
+    ],
+    "workflow": [
+      "System monitors raw material levels and flags shortages.",
+      "Procurement initiates orders; materials are received and logged.",
+      "Production uses tracked materials; inventory updates automatically.",
+      "Approved vendor invoices trigger automated API payouts."
+    ],
+    "useCases": [
+      "Industrial Manufacturing",
+      "FMCG Production",
+      "Apparel and Textile Factories"
+    ],
+    "faq": [
+      {
+        "q": "Can you integrate with IoT devices on the floor?",
+        "a": "We can build interfaces to capture data from connected industrial machinery and sensors."
+      },
+      {
+        "q": "How does the automated vendor payout work?",
+        "a": "Once an invoice is approved internally, our banking APIs execute the transfer to the vendor's account."
+      },
+      {
+        "q": "Is it possible to track batch and lot numbers?",
+        "a": "Yes, the inventory system supports detailed tracking for quality control and recalls."
+      },
+      {
+        "q": "Can we generate custom reports?",
+        "a": "The dashboard includes powerful reporting tools to analyze efficiency and costs."
+      }
+    ],
+    "cta": "Synchronize your manufacturing operations."
+  }
+}

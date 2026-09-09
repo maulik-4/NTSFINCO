@@ -6,7 +6,7 @@
 
   function AppTransition() {
     const location = useLocation()
-    return <SiteLayout><AnimatePresence mode="wait"><motion.div key={location.pathname} className="route-view" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -8 }} transition={{ duration: 0.35 }}><AppRoutes /></motion.div></AnimatePresence><RouteLoader key={location.pathname} /></SiteLayout>
+    return <SiteLayout><AnimatePresence mode="wait"><motion.div key={location.pathname} className="route-view" initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} transition={{ duration: 0.4, ease: "easeOut" }}><AppRoutes /></motion.div></AnimatePresence><RouteLoader key={location.pathname} /></SiteLayout>
   }
 
   function RouteLoader() {

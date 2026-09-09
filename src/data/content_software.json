@@ -1,0 +1,818 @@
+{
+  "b2b-mobile-recharge": {
+    "hero": {
+      "title": "B2B Mobile Recharge Platform",
+      "subtitle": "Empower your distributor and retailer network with a unified recharge control layer."
+    },
+    "overview": "Our B2B Mobile Recharge software provides a robust infrastructure for distributors to manage thousands of retailers effortlessly. It streamlines prepaid top-ups, transaction tracking, and commission payouts under one comprehensive dashboard.",
+    "problem": "Managing a multi-tier distributor and retailer network manually leads to revenue leakage, delayed commission settlements, and poor visibility into daily transaction volumes.",
+    "solution": "Deploy a secure, highly scalable B2B portal that automates balance distribution, handles high-throughput transactions seamlessly, and offers real-time margin calculations.",
+    "features": [
+      "Multi-tier hierarchy management (Admin, Master Distributor, Distributor, Retailer)",
+      "Automated commission and surcharge routing",
+      "Real-time transaction analytics and success rate monitoring",
+      "Role-based access control with secure wallet management"
+    ],
+    "benefits": [
+      "Eliminate manual commission calculations and reduce operational errors",
+      "Scale your retail network infinitely with self-onboarding tools",
+      "Boost partner trust through transparent, instant settlements",
+      "Identify high-performing regions and optimize sales strategies"
+    ],
+    "workflow": [
+      "Admin sets up commission slabs and creates master distributors.",
+      "Distributors allocate digital balance to their downline retailers.",
+      "Retailers process mobile recharges for end customers instantly.",
+      "Commissions are automatically credited to respective wallets in real-time."
+    ],
+    "useCases": [
+      "Large-scale recharge distribution businesses expanding regionally.",
+      "Enterprise aggregators seeking to digitize traditional retail chains.",
+      "Telecom partners needing a dedicated portal for high-volume transactions."
+    ],
+    "faq": [
+      {
+        "question": "Can I set different commission rates for different retailers?",
+        "answer": "Yes, our dynamic slab system allows you to configure unique margins for individual users or specific tiers."
+      },
+      {
+        "question": "How quickly do recharges process?",
+        "answer": "Transactions are routed via optimized APIs, typically completing in under 3 seconds."
+      },
+      {
+        "question": "Is there a limit to the number of retailers I can onboard?",
+        "answer": "No, the platform is built to scale and can support unlimited retailers and distributors."
+      },
+      {
+        "question": "How do we handle failed transactions?",
+        "answer": "The system features automated reconciliation, refunding failed transactions directly to the retailer's wallet instantly."
+      }
+    ],
+    "cta": "Start building your recharge network today"
+  },
+  "b2c-recharge": {
+    "hero": {
+      "title": "B2C Recharge Portal",
+      "subtitle": "Deliver a frictionless, direct-to-consumer recharge experience."
+    },
+    "overview": "The B2C Recharge Portal is designed for consumer-facing businesses wanting to offer quick and reliable mobile top-ups. It combines intuitive user interfaces with secure payment gateways to maximize conversions and user retention.",
+    "problem": "Consumers abandon recharge portals that have complex navigation, hidden fees, or slow transaction processing times.",
+    "solution": "Provide a clean, mobile-optimized interface where users can select their operator, enter their number, and pay securely within seconds.",
+    "features": [
+      "Mobile-responsive, intuitive consumer interface",
+      "Integrated secure payment gateways (UPI, Cards, NetBanking)",
+      "Automated plan fetching and R-Offer displays",
+      "Guest checkout and registered user wallet options"
+    ],
+    "benefits": [
+      "Increase transaction completion rates with a 3-step checkout",
+      "Enhance customer loyalty through automated promotional offers",
+      "Reduce support tickets with clear, real-time transaction statuses",
+      "Drive repeat business using integrated digital wallets"
+    ],
+    "workflow": [
+      "User enters mobile number and selects a recharge plan.",
+      "User proceeds to checkout using preferred payment method.",
+      "Payment gateway authenticates and captures the funds.",
+      "System processes the recharge and displays the success receipt."
+    ],
+    "useCases": [
+      "Independent brands launching a standalone consumer recharge website.",
+      "Utility apps seeking to cross-sell mobile recharge services.",
+      "Fintech startups looking for rapid go-to-market consumer portals."
+    ],
+    "faq": [
+      {
+        "question": "Does it support auto-fetching of operator plans?",
+        "answer": "Yes, the portal integrates with operator APIs to display real-time valid plans and special offers."
+      },
+      {
+        "question": "Can users save their payment details?",
+        "answer": "Yes, through secure tokenization provided by integrated payment gateways, users can save cards for faster checkouts."
+      },
+      {
+        "question": "Is it mobile-friendly?",
+        "answer": "Absolutely, the portal is built with a mobile-first approach to ensure a seamless experience on all devices."
+      },
+      {
+        "question": "What happens if a payment is deducted but recharge fails?",
+        "answer": "The system initiates an automatic refund process which is typically credited back to the original payment source."
+      }
+    ],
+    "cta": "Launch your consumer portal now"
+  },
+  "multi-recharge": {
+    "hero": {
+      "title": "Multi Recharge Platform",
+      "subtitle": "Unify mobile, DTH, data, and utility payments into one robust system."
+    },
+    "overview": "Our Multi Recharge Platform allows businesses to offer a comprehensive suite of payment services from a single wallet. It simplifies the aggregation of multiple service providers, making it easier for agents to serve diverse customer needs.",
+    "problem": "Managing separate portals for mobile, DTH, and data cards creates fragmented workflows, tying up capital in multiple wallets.",
+    "solution": "Consolidate all prepaid services into a single-wallet architecture, enabling seamless cross-category transactions without switching platforms.",
+    "features": [
+      "Single-wallet system for Mobile, DTH, and Data Card transactions",
+      "Intelligent API routing to ensure maximum uptime",
+      "Comprehensive MIS and transaction reporting dashboard",
+      "Customizable frontend themes and branding options"
+    ],
+    "benefits": [
+      "Optimize working capital by maintaining a single consolidated wallet",
+      "Improve agent efficiency by offering all services in one place",
+      "Maximize success rates through intelligent fallback routing",
+      "Simplify accounting with centralized reconciliation reports"
+    ],
+    "workflow": [
+      "Agent logs into the unified dashboard and checks single-wallet balance.",
+      "Customer requests a specific service (e.g., DTH top-up).",
+      "Agent selects the operator, enters details, and processes the transaction.",
+      "System routes the request and generates an instant consolidated receipt."
+    ],
+    "useCases": [
+      "Retail shop owners wanting to offer multiple digital services.",
+      "Enterprise aggregators consolidating various API providers.",
+      "Rural banking agents providing comprehensive digital access."
+    ],
+    "faq": [
+      {
+        "question": "Can I add new services later?",
+        "answer": "Yes, the modular architecture allows you to plug in additional services like utility payments or insurance at any time."
+      },
+      {
+        "question": "How does intelligent routing work?",
+        "answer": "If a primary API fails, the system automatically switches to a backup API provider to ensure the transaction succeeds."
+      },
+      {
+        "question": "Is it available as a white-label solution?",
+        "answer": "Yes, we provide fully white-labeled platforms tailored to your brand identity."
+      },
+      {
+        "question": "Do you provide an Android app?",
+        "answer": "Yes, a fully functional white-label Android application is included for agents on the go."
+      }
+    ],
+    "cta": "Explore multi-recharge solutions"
+  },
+  "api-reselling": {
+    "hero": {
+      "title": "API Reselling Software",
+      "subtitle": "Package your infrastructure into a powerful, profitable distribution channel."
+    },
+    "overview": "API Reselling Software enables you to become a technology provider by repackaging and distributing core APIs to other businesses. It provides the billing, routing, and access controls needed to run a successful API marketplace.",
+    "problem": "Selling API access manually lacks the necessary controls for rate limiting, automated billing, and usage monitoring, leading to service abuse and revenue loss.",
+    "solution": "Deploy a comprehensive API management layer that automates client onboarding, tracks payload usage in real-time, and manages varied pricing tiers securely.",
+    "features": [
+      "Automated API key generation and IP whitelisting",
+      "Real-time usage tracking and rate-limiting controls",
+      "Dynamic pricing and margin management per client",
+      "Comprehensive developer documentation portal"
+    ],
+    "benefits": [
+      "Monetize existing infrastructure by opening new B2B revenue streams",
+      "Protect your core systems from abuse with intelligent rate limiting",
+      "Reduce administrative overhead with automated billing cycles",
+      "Attract developers with clear documentation and instant access"
+    ],
+    "workflow": [
+      "Client registers on your portal and selects an API package.",
+      "System automatically generates secure API keys and whitelists IP addresses.",
+      "Client integrates the API into their application.",
+      "Admin tracks usage, calculates margins, and bills the client automatically."
+    ],
+    "useCases": [
+      "Aggregators distributing telecom APIs to smaller startup networks.",
+      "Fintechs monetizing their proprietary verification or payment gateways.",
+      "Data providers offering standardized access to enterprise clients."
+    ],
+    "faq": [
+      {
+        "question": "Can I set custom pricing for different clients?",
+        "answer": "Yes, you can configure unique pricing tiers, flat fees, or percentage-based margins per client."
+      },
+      {
+        "question": "How is API security managed?",
+        "answer": "Security is enforced via API keys, IP whitelisting, and strict rate-limiting protocols."
+      },
+      {
+        "question": "Do I need to create developer documentation?",
+        "answer": "The software includes a built-in, customizable documentation portal for your clients."
+      },
+      {
+        "question": "Can I monitor client traffic in real time?",
+        "answer": "Yes, the admin dashboard provides live metrics on API hits, success rates, and latency."
+      }
+    ],
+    "cta": "Start your API business today"
+  },
+  "utility-bill-payment": {
+    "hero": {
+      "title": "Utility Bill Payment Platform",
+      "subtitle": "Manage biller discovery and secure collections efficiently."
+    },
+    "overview": "Our Utility Bill Payment software enables businesses to process electricity, water, gas, and broadband bills seamlessly. Built for high reliability, it ensures timely settlements and accurate bill fetching directly from service providers.",
+    "problem": "Processing utility bills without automated bill fetching leads to incorrect payments, late fees, and manual reconciliation nightmares.",
+    "solution": "Integrate a system that dynamically fetches exact due amounts, processes payments instantly, and automatically updates biller records to prevent late penalties.",
+    "features": [
+      "Dynamic bill fetching and validation",
+      "Support for electricity, water, gas, broadband, and landline",
+      "Automated receipt generation and customer alerts",
+      "Detailed settlement and reconciliation reports"
+    ],
+    "benefits": [
+      "Ensure 100% accurate payments with direct biller integration",
+      "Build customer trust with instant confirmation receipts",
+      "Simplify operations with centralized utility management",
+      "Generate additional revenue through convenience fees or commissions"
+    ],
+    "workflow": [
+      "Agent enters customer's consumer number for a specific utility.",
+      "System fetches the real-time bill amount and due date.",
+      "Agent collects payment and processes the transaction.",
+      "System updates the biller and generates an instant receipt."
+    ],
+    "useCases": [
+      "Retail networks providing bill payment services to walk-in customers.",
+      "Property management platforms automating tenant utility collections.",
+      "Consumer apps adding utility payments to increase user engagement."
+    ],
+    "faq": [
+      {
+        "question": "Does it support all regional electricity boards?",
+        "answer": "Yes, it integrates with major aggregators covering nationwide and regional electricity boards."
+      },
+      {
+        "question": "What happens if a bill is already paid?",
+        "answer": "The dynamic fetch feature will indicate that the bill is already paid, preventing double payments."
+      },
+      {
+        "question": "How are late fees handled?",
+        "answer": "If a bill is past due, the fetched amount will automatically include the applicable late fees."
+      },
+      {
+        "question": "Are receipts generated instantly?",
+        "answer": "Yes, downloadable and shareable receipts are generated the moment the transaction succeeds."
+      }
+    ],
+    "cta": "Simplify bill payments now"
+  },
+  "bbps": {
+    "hero": {
+      "title": "BBPS Operations Platform",
+      "subtitle": "Your centralized command center for Bharat Bill Payment System operations."
+    },
+    "overview": "The BBPS Operations software provides a certified, secure environment to process payments across the entire Bharat BillPay ecosystem. It is designed to handle massive transaction volumes with strict compliance and reporting standards.",
+    "problem": "Connecting directly to the BBPS network requires overcoming complex compliance hurdles, dispute management processes, and stringent operational guidelines.",
+    "solution": "Utilize a ready-to-deploy, BBPS-compliant platform that manages the complexities of agent institution workflows, real-time routing, and automated dispute resolution.",
+    "features": [
+      "Full compliance with BBPS operating guidelines",
+      "Centralized Agent Institution (AI) management dashboard",
+      "Automated Complaint Management System (CMS) integration",
+      "Real-time settlement tracking and Biller Operating Unit (BOU) routing"
+    ],
+    "benefits": [
+      "Accelerate go-to-market with a pre-certified BBPS architecture",
+      "Reduce operational risks with automated reconciliation",
+      "Enhance customer satisfaction via standard dispute resolution",
+      "Access thousands of billers across India instantly"
+    ],
+    "workflow": [
+      "Customer requests a bill payment via an authorized agent.",
+      "Platform authenticates the request and fetches the exact bill via BBPS.",
+      "Payment is processed and an official BBPS reference number is generated.",
+      "Funds are settled according to NPCI guidelines automatically."
+    ],
+    "useCases": [
+      "Fintech companies registering as BBPS Agent Institutions.",
+      "Banks requiring a robust backend for their bill payment operations.",
+      "Large-scale retail chains offering standardized bill payments."
+    ],
+    "faq": [
+      {
+        "question": "Is this platform BBPS certified?",
+        "answer": "The platform architecture is designed to meet all NPCI guidelines to facilitate your certification process."
+      },
+      {
+        "question": "How are complaints handled?",
+        "answer": "It includes a Complaint Management System (CMS) module synced with BBPS for tracking and resolving disputes."
+      },
+      {
+        "question": "Does it support offline agents?",
+        "answer": "Yes, you can manage hierarchical agent networks processing offline/cash BBPS transactions."
+      },
+      {
+        "question": "What billers are available?",
+        "answer": "You get access to the entire BBPS catalog, including telecom, electricity, FASTag, DTH, and loan EMIs."
+      }
+    ],
+    "cta": "Streamline BBPS operations"
+  },
+  "aeps": {
+    "hero": {
+      "title": "AEPS Retailer Platform",
+      "subtitle": "Empower your network with assisted Aadhaar-based banking workflows."
+    },
+    "overview": "Our AEPS (Aadhaar Enabled Payment System) Platform allows retailers to transform their shops into mini-banks. It facilitates secure cash withdrawals, balance inquiries, and mini-statements using biometric authentication.",
+    "problem": "Rural and semi-urban populations lack access to traditional ATMs, while retailers struggle to offer secure, compliant cash-out services.",
+    "solution": "Deploy an encrypted, biometric-enabled platform that connects directly to banking switches, allowing safe and instant cash withdrawals using just an Aadhaar number and fingerprint.",
+    "features": [
+      "Biometric device integration (Mantra, Morpho, SecuGen)",
+      "Support for Cash Withdrawal, Balance Enquiry, and Mini Statement",
+      "Two-factor authentication (2FA) for retailer login",
+      "Real-time settlement to the retailer's digital wallet"
+    ],
+    "benefits": [
+      "Increase footfall to retail stores by offering essential banking services",
+      "Ensure transaction security with end-to-end UIDAI compliance",
+      "Generate steady commission revenue on every transaction",
+      "Reduce cash handling costs by circulating cash locally"
+    ],
+    "workflow": [
+      "Retailer completes daily 2FA biometric login.",
+      "Customer provides Aadhaar number and selects bank.",
+      "Customer authenticates the transaction using a fingerprint scanner.",
+      "Transaction clears, retailer hands over cash, and wallet is instantly credited."
+    ],
+    "useCases": [
+      "Rural retail networks expanding into financial inclusion services.",
+      "Micro-finance institutions facilitating localized loan disbursements.",
+      "Distribution companies building an assisted banking agent network."
+    ],
+    "faq": [
+      {
+        "question": "Which biometric devices are supported?",
+        "answer": "The platform supports all UIDAI-certified RD service devices, including Morpho and Mantra."
+      },
+      {
+        "question": "Is 2FA mandatory for retailers?",
+        "answer": "Yes, as per NPCI guidelines, daily biometric two-factor authentication is enforced for all agents."
+      },
+      {
+        "question": "How long does settlement take?",
+        "answer": "The agent's virtual wallet is credited instantly upon a successful transaction."
+      },
+      {
+        "question": "What happens if an account is debited but the transaction fails?",
+        "answer": "The system logs a failed state and the amount is auto-reversed to the customer's bank account per NPCI rules."
+      }
+    ],
+    "cta": "Launch your AEPS network"
+  },
+  "dmt": {
+    "hero": {
+      "title": "Domestic Money Transfer Software",
+      "subtitle": "Build a dependable transfer desk for assisted remittance."
+    },
+    "overview": "The DMT (Domestic Money Transfer) platform provides a secure framework for agents to send money on behalf of unbanked or migrant customers. It bypasses traditional banking hours, offering 24/7 instant fund transfers across India.",
+    "problem": "Migrant workers face significant hurdles in sending money home due to limited banking access, complex apps, and restrictive branch timings.",
+    "solution": "Equip local retailers with a streamlined DMT portal that allows instant IMPS/NEFT transfers using only the sender's mobile number and receiver's bank details.",
+    "features": [
+      "Instant IMPS and automated NEFT routing",
+      "Sender registration and OTP-based verification",
+      "Beneficiary account validation (Penny Drop)",
+      "Customizable surcharge and commission logic"
+    ],
+    "benefits": [
+      "Capture the massive domestic remittance market securely",
+      "Reduce transaction failures with pre-transfer account validation",
+      "Build customer loyalty by offering instant, reliable transfers",
+      "Simplify regulatory compliance with built-in KYC limits"
+    ],
+    "workflow": [
+      "Agent registers the sender using their mobile number and OTP.",
+      "Agent adds and verifies the beneficiary's bank account details.",
+      "Agent collects cash and initiates the transfer via the platform.",
+      "Funds are routed via IMPS instantly, and the sender receives an SMS."
+    ],
+    "useCases": [
+      "Money transfer businesses in industrial or migrant-heavy areas.",
+      "Retail chains wanting to diversify their financial service offerings.",
+      "B2B platforms integrating remittance into their existing agent workflows."
+    ],
+    "faq": [
+      {
+        "question": "Are transfers truly instant?",
+        "answer": "Yes, transactions routed via IMPS are credited to the beneficiary's account instantly, 24/7."
+      },
+      {
+        "question": "What is the transfer limit?",
+        "answer": "Limits are configurable but typically align with RBI guidelines (e.g., ₹25,000 per month for non-KYC senders)."
+      },
+      {
+        "question": "How do I prevent transferring to wrong accounts?",
+        "answer": "The built-in penny drop feature verifies the beneficiary name and account status before the main transfer."
+      },
+      {
+        "question": "What happens if a bank server is down?",
+        "answer": "The system employs intelligent routing and can queue transactions or fall back to NEFT depending on the configuration."
+      }
+    ],
+    "cta": "Start remittance operations"
+  },
+  "aadhaar-pay": {
+    "hero": {
+      "title": "Aadhaar Pay Merchant Platform",
+      "subtitle": "Enable merchant-led payment flows with adaptable biometric controls."
+    },
+    "overview": "Aadhaar Pay allows merchants to accept payments from customers simply using the customer's Aadhaar number and fingerprint. It removes the need for smartphones, cards, or PINs, making digital payments accessible to everyone.",
+    "problem": "Many rural customers lack debit cards or UPI apps, making it impossible for local merchants to accept digital payments from them.",
+    "solution": "Implement Aadhaar Pay to let merchants accept secure, biometric-authorized payments directly from a customer's Aadhaar-linked bank account.",
+    "features": [
+      "Merchant onboarding with instant activation",
+      "Secure biometric authentication integration",
+      "Customizable transaction limits and dynamic MDR settings",
+      "Instant or scheduled merchant settlement options"
+    ],
+    "benefits": [
+      "Expand merchant customer base to include the unbanked population",
+      "Eliminate the risk of cash handling and fake currency",
+      "Provide a frictionless checkout experience requiring no customer device",
+      "Increase merchant retention through transparent settlement processes"
+    ],
+    "workflow": [
+      "Merchant enters the bill amount into the application.",
+      "Customer selects their bank and inputs their Aadhaar number.",
+      "Customer authenticates the payment via a biometric scanner.",
+      "Funds are deducted from the customer and credited to the merchant's ledger."
+    ],
+    "useCases": [
+      "Rural retail stores seeking digital payment alternatives.",
+      "Agri-businesses collecting payments from farmers.",
+      "Micro-merchants wanting a low-cost digital acceptance solution."
+    ],
+    "faq": [
+      {
+        "question": "Is Aadhaar Pay different from AEPS?",
+        "answer": "Yes, AEPS is primarily for cash withdrawal by agents, while Aadhaar Pay is designed for merchants to accept payments for goods/services."
+      },
+      {
+        "question": "Are there transaction charges?",
+        "answer": "Transactions typically incur a Merchant Discount Rate (MDR) as defined by banking guidelines, which can be configured."
+      },
+      {
+        "question": "Can any merchant use this?",
+        "answer": "Merchants must undergo a digital KYC and onboarding process before activating the service."
+      },
+      {
+        "question": "Is a biometric device required?",
+        "answer": "Yes, merchants need a standard STQC-certified biometric scanner connected to their mobile or PC."
+      }
+    ],
+    "cta": "Enable Aadhaar Pay today"
+  },
+  "micro-atm": {
+    "hero": {
+      "title": "Micro ATM & mATM POS",
+      "subtitle": "Connect assisted cash access with comprehensive operational oversight."
+    },
+    "overview": "The Micro ATM software links portable card reading devices to your centralized platform, allowing agents to offer debit card cash withdrawals and balance inquiries anywhere, effectively deploying ATMs at a fraction of the cost.",
+    "problem": "Deploying traditional ATMs is cost-prohibitive in many areas, leaving populations without access to their banked cash via debit cards.",
+    "solution": "Equip agents with portable mATM devices synced to our secure software platform, turning any storefront into a secure cash withdrawal point.",
+    "features": [
+      "Seamless integration with major mATM hardware devices",
+      "Support for all RuPay, Visa, and Mastercard debit cards",
+      "Encrypted PIN pad transaction routing",
+      "Automated commission distribution and wallet crediting"
+    ],
+    "benefits": [
+      "Drastically reduce infrastructure costs compared to traditional ATMs",
+      "Drive additional revenue for agents through transaction commissions",
+      "Ensure high security with EMV-certified hardware integration",
+      "Monitor all device fleets and transaction metrics from one dashboard"
+    ],
+    "workflow": [
+      "Agent pairs the mATM device with the mobile app via Bluetooth.",
+      "Customer swipes or inserts their debit card into the mATM.",
+      "Customer enters their secure PIN on the device.",
+      "Transaction completes, agent dispenses cash, and wallet is credited."
+    ],
+    "useCases": [
+      "Financial inclusion networks expanding cash-out services.",
+      "Delivery and logistics companies facilitating card-on-delivery.",
+      "Retail chains upgrading POS systems to include cash-out features."
+    ],
+    "faq": [
+      {
+        "question": "Which mATM devices do you support?",
+        "answer": "We support major OEM devices commonly used in the industry (e.g., Pax, MoreFun, Nexgo)."
+      },
+      {
+        "question": "Is it secure?",
+        "answer": "Yes, the devices are EMV L1/L2 certified, and PINs are encrypted at the hardware level."
+      },
+      {
+        "question": "Can it be used for card payments (POS)?",
+        "answer": "Depending on the banking partner, the devices can be configured to support both cash withdrawal (mATM) and purchase (POS) flows."
+      },
+      {
+        "question": "How are agents settled?",
+        "answer": "The transaction amount plus the earned commission is instantly credited to the agent's digital platform wallet."
+      }
+    ],
+    "cta": "Deploy your mATM network"
+  },
+  "bank-payout-settlement": {
+    "hero": {
+      "title": "Bank Payout & Settlement",
+      "subtitle": "Orchestrate payouts, reconciliation, and exception handling smoothly."
+    },
+    "overview": "The Bank Payout and Settlement system is an enterprise-grade solution designed to automate high-volume disbursals. It replaces manual bank uploads with API-driven automated routing for vendor payments, agent settlements, and refunds.",
+    "problem": "Manual payout processes using bulk excel uploads are error-prone, time-consuming, and lack real-time status tracking, leading to delayed settlements.",
+    "solution": "Implement an automated payout engine that routes funds via IMPS, NEFT, or RTGS intelligently, tracks transaction states in real-time, and handles failures gracefully.",
+    "features": [
+      "Intelligent routing across IMPS, NEFT, and RTGS",
+      "Bulk payout processing via API or CSV upload",
+      "Real-time transaction status webhooks",
+      "Automated reconciliation and exception management"
+    ],
+    "benefits": [
+      "Eliminate manual processing errors and reduce finance team overhead",
+      "Improve partner and vendor satisfaction with instant, reliable settlements",
+      "Maintain tight financial control with maker-checker approval workflows",
+      "Easily scale from hundreds to millions of transactions a day"
+    ],
+    "workflow": [
+      "System or Admin initiates a payout request via API or dashboard.",
+      "The engine validates the account and determines the optimal transfer route.",
+      "Funds are transferred instantly, and status is updated in real-time.",
+      "In case of failure, the system automatically flags or queues for retry."
+    ],
+    "useCases": [
+      "Fintech platforms settling funds to their agent network daily.",
+      "E-commerce marketplaces executing vendor payouts and customer refunds.",
+      "Lending companies disbursing loans directly to borrower bank accounts."
+    ],
+    "faq": [
+      {
+        "question": "Can I set up approval workflows?",
+        "answer": "Yes, the platform supports multi-level maker-checker logic for secure payout authorization."
+      },
+      {
+        "question": "Are bulk payouts supported?",
+        "answer": "Absolutely. You can process thousands of payouts simultaneously via a single API call or CSV upload."
+      },
+      {
+        "question": "What happens if a beneficiary bank is down?",
+        "answer": "The system's intelligent routing can automatically switch from IMPS to NEFT, or queue the transaction for later processing."
+      },
+      {
+        "question": "Is it possible to track the status of a payout?",
+        "answer": "Yes, real-time status is visible on the dashboard, and automated webhooks can update your core systems."
+      }
+    ],
+    "cta": "Automate your payouts"
+  },
+  "verify-platform": {
+    "hero": {
+      "title": "Verify API Platform",
+      "subtitle": "Bring identity and financial checks into a single manageable workspace."
+    },
+    "overview": "The Verify API Platform consolidates multiple KYC, identity, and financial verification tools into one seamless interface. It allows businesses to automate their onboarding flows securely while remaining fully compliant with regulatory standards.",
+    "problem": "Integrating and managing disparate verification APIs for PAN, Aadhaar, and Bank Accounts leads to fragmented workflows and high engineering maintenance.",
+    "solution": "Utilize a unified verification suite that provides a single integration point for all identity checks, complete with comprehensive audit logs and decisioning logic.",
+    "features": [
+      "Unified integration for PAN, Aadhaar OTP, and Bank Penny Drop",
+      "Real-time validation and data extraction",
+      "Comprehensive audit trails and compliance reporting",
+      "Customizable verification workflows and rule engines"
+    ],
+    "benefits": [
+      "Reduce developer integration time from weeks to days",
+      "Lower onboarding drop-offs with instant, real-time verifications",
+      "Ensure regulatory compliance with securely logged audit trails",
+      "Cut costs by managing all verification vendors through one contract"
+    ],
+    "workflow": [
+      "User submits identity details during the onboarding journey.",
+      "Platform routes the data to the appropriate verification API.",
+      "API validates the data against government databases instantly.",
+      "System returns a unified success/failure payload to your application."
+    ],
+    "useCases": [
+      "Fintech apps requiring robust KYC for user onboarding.",
+      "Gig economy platforms verifying contractor identities.",
+      "B2B software validating corporate entities (GST/CIN)."
+    ],
+    "faq": [
+      {
+        "question": "What verification types are supported?",
+        "answer": "The platform supports PAN, Aadhaar (OTP & Biometric), Bank Account Validation, GSTIN, and more."
+      },
+      {
+        "question": "Is the data stored securely?",
+        "answer": "We adhere to strict data privacy standards; sensitive PII is encrypted and transiently processed per regulations."
+      },
+      {
+        "question": "Can I build custom verification logic?",
+        "answer": "Yes, the platform allows you to chain verifications (e.g., check PAN, then match name with Bank Account)."
+      },
+      {
+        "question": "How fast are the responses?",
+        "answer": "Most verifications, such as PAN and Penny Drop, complete in under 2 seconds."
+      }
+    ],
+    "cta": "Integrate verify suite"
+  },
+  "background-verification": {
+    "hero": {
+      "title": "Background Verification Software",
+      "subtitle": "Structure review queues and evidence for faster, safer decisions."
+    },
+    "overview": "Our Background Verification Software helps HR teams and agencies streamline the complex process of candidate screening. It organizes digital evidence, automates data checks, and manages manual review workflows in one secure portal.",
+    "problem": "Manual background checks involve disorganized emails, delayed vendor reports, and compliance risks, leading to slow hiring processes.",
+    "solution": "Deploy an end-to-end platform that automates primary API checks, structures document collection, and provides a clear queue for human review and final decisioning.",
+    "features": [
+      "Automated digital KYC (Identity, Address, Criminal Records)",
+      "Secure candidate document upload portal",
+      "Configurable SLA tracking and vendor management",
+      "Comprehensive, legally compliant report generation"
+    ],
+    "benefits": [
+      "Accelerate time-to-hire by automating primary data validations",
+      "Enhance data security with centralized document repositories",
+      "Improve team efficiency with clear, SLA-driven review queues",
+      "Minimize legal risks with standardized, unalterable final reports"
+    ],
+    "workflow": [
+      "HR initiates a background check request from the dashboard.",
+      "Candidate receives a secure link to upload documents and consent.",
+      "System automatically runs API checks (ID, Bank, Court records).",
+      "Reviewers validate edge cases and generate the final PDF report."
+    ],
+    "useCases": [
+      "Enterprise HR departments managing high-volume recruitment.",
+      "Specialized Background Verification (BGV) agencies.",
+      "On-demand staffing platforms needing rapid worker screening."
+    ],
+    "faq": [
+      {
+        "question": "Can candidates submit documents on mobile?",
+        "answer": "Yes, the candidate portal is fully responsive and supports direct camera uploads."
+      },
+      {
+        "question": "Does it integrate with existing ATS systems?",
+        "answer": "The software offers robust APIs to connect seamlessly with modern Applicant Tracking Systems."
+      },
+      {
+        "question": "How are manual checks handled?",
+        "answer": "Tasks like physical address verification can be assigned to field agents via the platform and tracked against SLAs."
+      },
+      {
+        "question": "Are the final reports customizable?",
+        "answer": "Yes, you can white-label the reports and customize the data fields included based on client requirements."
+      }
+    ],
+    "cta": "Streamline background checks"
+  },
+  "fintech-custom-development": {
+    "hero": {
+      "title": "Fintech Custom Development",
+      "subtitle": "Shape a financial platform around the workflows your business actually runs."
+    },
+    "overview": "Our Fintech Custom Development service provides bespoke engineering for complex financial workflows. We build tailored, scalable architectures that off-the-shelf software simply cannot support.",
+    "problem": "Standard SaaS platforms often force businesses to change their unique operational processes to fit rigid software constraints.",
+    "solution": "Collaborate with fintech experts to design and develop a custom platform that precisely mirrors your business logic, ensuring maximum operational efficiency.",
+    "features": [
+      "Bespoke architecture design and microservices development",
+      "Custom integration with banking cores and third-party APIs",
+      "Enterprise-grade security and compliance frameworks",
+      "Dedicated agile engineering and support teams"
+    ],
+    "benefits": [
+      "Gain a competitive edge with a unique, proprietary technology stack",
+      "Scale without limits using custom-built, optimized architectures",
+      "Maintain complete ownership of your intellectual property and data",
+      "Ensure airtight security tailored specifically to your threat model"
+    ],
+    "workflow": [
+      "Discovery phase to map your exact business logic and requirements.",
+      "Architecture design and prototyping of the solution.",
+      "Agile development sprints with continuous feedback and testing.",
+      "Secure deployment, followed by ongoing scaling and maintenance."
+    ],
+    "useCases": [
+      "Startups launching innovative neo-banking or lending concepts.",
+      "Large enterprises replacing legacy financial management systems.",
+      "Niche financial operators requiring highly specific compliance flows."
+    ],
+    "faq": [
+      {
+        "question": "Do I own the source code?",
+        "answer": "Yes, upon project completion and settlement, you retain full ownership of the intellectual property."
+      },
+      {
+        "question": "What technologies do you use?",
+        "answer": "We utilize modern, scalable stacks including Node.js, Python, React, and cloud-native AWS/Azure architectures."
+      },
+      {
+        "question": "How long does custom development take?",
+        "answer": "Timelines vary based on complexity, but an MVP typically takes between 3 to 6 months."
+      },
+      {
+        "question": "Do you assist with security compliance?",
+        "answer": "Absolutely. We build with PCI-DSS and ISO standards in mind to facilitate your compliance audits."
+      }
+    ],
+    "cta": "Discuss your custom project"
+  },
+  "crm": {
+    "hero": {
+      "title": "CRM Software Solutions",
+      "subtitle": "Keep leads, relationships, and follow-ups visible to every team."
+    },
+    "overview": "Our CRM software is tailored to streamline sales pipelines, improve customer relationships, and automate follow-ups. It provides a centralized view of all interactions, ensuring no lead falls through the cracks.",
+    "problem": "Disjointed spreadsheets and scattered communications lead to lost sales opportunities, poor customer service, and lack of accountability.",
+    "solution": "Implement a centralized CRM that tracks every customer touchpoint, automates routine tasks, and provides clear visibility into sales performance.",
+    "features": [
+      "Customizable sales pipelines and lead scoring",
+      "Automated email and SMS follow-up sequences",
+      "Detailed activity logging and interaction history",
+      "Comprehensive sales forecasting and reporting dashboards"
+    ],
+    "benefits": [
+      "Increase conversion rates by ensuring timely, organized follow-ups",
+      "Enhance team collaboration with shared customer context",
+      "Save time by automating repetitive communication tasks",
+      "Make data-driven decisions using real-time sales metrics"
+    ],
+    "workflow": [
+      "New leads are automatically captured from website forms or APIs.",
+      "Leads are assigned to sales reps based on predefined rules.",
+      "Reps track calls, emails, and meetings within the lead profile.",
+      "Management reviews pipeline health and forecasts via the dashboard."
+    ],
+    "useCases": [
+      "B2B sales teams managing long, complex deal cycles.",
+      "Service businesses tracking client support and renewal histories.",
+      "Marketing teams nurturing large volumes of inbound leads."
+    ],
+    "faq": [
+      {
+        "question": "Can it integrate with our email provider?",
+        "answer": "Yes, it supports seamless integration with G Suite, Outlook, and major SMTP providers."
+      },
+      {
+        "question": "Is it customizable to our sales process?",
+        "answer": "Absolutely. You can define custom stages, fields, and automation rules tailored to your workflow."
+      },
+      {
+        "question": "Does it have a mobile app for field agents?",
+        "answer": "Yes, the CRM includes a mobile application for accessing and updating data on the go."
+      },
+      {
+        "question": "Can I import existing data?",
+        "answer": "Yes, easy-to-use CSV import tools allow you to migrate data from legacy systems effortlessly."
+      }
+    ],
+    "cta": "Optimize your sales pipeline"
+  },
+  "inventory-pos": {
+    "hero": {
+      "title": "Inventory POS & Billing",
+      "subtitle": "Bring inventory, billing, and customer records into one operating view."
+    },
+    "overview": "The Inventory POS & Billing software connects your storefront checkout with backend stock management. It ensures that every sale instantly updates your inventory levels, preventing stockouts and streamlining accounting.",
+    "problem": "Using separate systems for billing and inventory causes stock discrepancies, slows down checkout, and complicates tax compliance.",
+    "solution": "Deploy a unified point-of-sale solution that handles fast checkouts, syncs stock in real-time, and automatically generates GST-compliant invoices.",
+    "features": [
+      "Fast, intuitive barcode-enabled POS interface",
+      "Real-time multi-store inventory synchronization",
+      "Automated GST invoicing and tax report generation",
+      "Integrated customer loyalty and credit management"
+    ],
+    "benefits": [
+      "Speed up checkout lines and improve customer satisfaction",
+      "Prevent revenue loss through accurate, real-time stock tracking",
+      "Simplify accounting with automated, compliant tax reporting",
+      "Boost repeat sales using integrated loyalty programs"
+    ],
+    "workflow": [
+      "Cashier scans items, and the POS instantly fetches pricing.",
+      "System applies any relevant discounts or loyalty points.",
+      "Customer pays, receipt is printed, and inventory is deducted.",
+      "Daily sales and tax data are automatically compiled for reporting."
+    ],
+    "useCases": [
+      "Retail supermarkets requiring high-speed checkout capabilities.",
+      "Multi-outlet electronics or apparel stores managing complex stock.",
+      "Wholesale distributors needing robust invoicing and credit ledgers."
+    ],
+    "faq": [
+      {
+        "question": "Does it support barcode scanners?",
+        "answer": "Yes, it is fully compatible with standard barcode scanners, receipt printers, and cash drawers."
+      },
+      {
+        "question": "Can I manage multiple store locations?",
+        "answer": "The cloud-based backend allows you to monitor and transfer stock across unlimited store locations."
+      },
+      {
+        "question": "Is it compliant with GST?",
+        "answer": "Yes, the system generates GST-compliant invoices and provides ready-to-file tax summaries."
+      },
+      {
+        "question": "Does it work offline?",
+        "answer": "The POS application can process sales offline and automatically sync data when internet connectivity is restored."
+      }
+    ],
+    "cta": "Upgrade your retail billing"
+  }
+}

@@ -39,11 +39,11 @@ function Navbar() {
   ]
 
   return (
-    <header className={`site-header ${scrolled ? 'is-scrolled' : ''}`}>
+    <header className={`site-header ${scrolled ? 'is-scrolled' : ''}`} onMouseLeave={() => setOpen(null)}>
       <div className="nav-shell">
         <Link className="brand" to="/" aria-label="NTSFINCO home"><span className="brand-mark">N</span><span>NTSFINCO</span></Link>
         <nav className="desktop-nav" aria-label="Main navigation">
-          {navItems.map(([label, target]) => target.startsWith('/') ? <NavLink key={label} className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'} to={target}>{label}</NavLink> : (
+          {navItems.map(([label, target]) => target.startsWith('/') ? <NavLink key={label} className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'} to={target} onMouseEnter={() => setOpen(null)}>{label}</NavLink> : (
             <button key={label} className={`nav-link nav-trigger ${open === target || location.pathname.startsWith(`/${target}`) ? 'active' : ''}`} onMouseEnter={() => setOpen(target)} onClick={() => setOpen(open === target ? null : target)} aria-haspopup="true" aria-expanded={open === target}>{label}<ChevronDown size={14} /></button>
           ))}
         </nav>
@@ -51,28 +51,91 @@ function Navbar() {
         <button className="mobile-menu-button" onClick={() => setMobileOpen(!mobileOpen)} aria-label={mobileOpen ? 'Close menu' : 'Open menu'}>{mobileOpen ? <X /> : <Menu />}</button>
       </div>
       <AnimatePresence>
-        {open && <MegaMenu type={open} onClose={() => setOpen(null)} />}
+        {open && <MegaMenu type={open} />}
         {mobileOpen && <MobileMenu navItems={navItems} />}
       </AnimatePresence>
     </header>
   )
 }
 
-function MegaMenu({ type, onClose }) {
-  const groups = menuGroups[type]
-  const [activeCategory, setActiveCategory] = useState(groups[0].id)
+function MegaMenu({ type }) {
+  const groups = menuGroups[type] || []
+  const [activeCategory, setActiveCategory] = useState(groups[0]?.id)
+
+  useEffect(() => {
+    if (groups.length > 0) {
+      setActiveCategory(groups[0].id)
+    }
+  }, [type, groups])
+
   const activeGroup = groups.find((group) => group.id === activeCategory) || groups[0]
-  return <motion.div className="mega-menu" onMouseLeave={onClose} initial={{ opacity: 0, y: -8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -8 }}>
-    <div className="mega-inner">
-      <div className="mega-intro"><span className="eyebrow">NTSFINCO CONTROL CENTER</span><h2>{type === 'software' ? 'Operating software for financial networks.' : type === 'api' ? 'Connect the capabilities your product needs.' : `Build the ${type} workflows your teams rely on.`}</h2><p>Choose a category to focus the system around the work you need to do.</p><div className="mega-signal"><span className="status-dot" /> {groups.length} ACTIVE DOMAINS</div></div>
-      <div className="mega-content"><div className="mega-categories" role="tablist" aria-label={`${type} categories`}>{groups.map((group) => <button className={`mega-category ${activeCategory === group.id ? 'active' : ''}`} key={group.id} onMouseEnter={() => setActiveCategory(group.id)} onFocus={() => setActiveCategory(group.id)} onClick={() => setActiveCategory(group.id)} role="tab" aria-selected={activeCategory === group.id}><span><b>{group.name}</b><small>{group.description || `${group.items.length} platform capabilities`}</small></span><ArrowUpRight size={15} /></button>)}</div><motion.div className="mega-results" key={activeGroup.id} initial={{ opacity: 0, x: 12 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: .2 }}><div className="mega-results-head"><span className="eyebrow">{activeGroup.name}</span><span>{activeGroup.items.length} routes</span></div>{activeGroup.items.map((item) => <Link className="mega-item" key={item.route} to={item.route}><span><strong>{item.title}</strong><small>{item.description}</small></span><ArrowUpRight size={15} /></Link>)}</motion.div></div>
-    </div>
-  </motion.div>
+
+  if (!activeGroup) return null
+
+  return (
+    <motion.div className="mega-menu" initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -5 }} transition={{ duration: 0.25, ease: "easeOut" }}>
+      <div className="mega-inner">
+        <div className="mega-intro">
+          <span className="eyebrow">NTSFINCO CONTROL CENTER</span>
+          <h2>{type === 'software' ? 'Operating software for financial networks.' : type === 'api' ? 'Connect the capabilities your product needs.' : `Build the ${type} workflows your teams rely on.`}</h2>
+          <p>Choose a category to focus the system around the work you need to do.</p>
+          <div className="mega-signal"><span className="status-dot" /> {groups.length} ACTIVE DOMAINS</div>
+        </div>
+        <div className="mega-content">
+          <div className="mega-categories" role="tablist" aria-label={`${type} categories`}>
+            {groups.map((group) => (
+              <button 
+                className={`mega-category ${activeCategory === group.id ? 'active' : ''}`} 
+                key={group.id} 
+                onMouseEnter={() => setActiveCategory(group.id)} 
+                onFocus={() => setActiveCategory(group.id)} 
+                onClick={() => setActiveCategory(group.id)} 
+                role="tab" 
+                aria-selected={activeCategory === group.id}
+              >
+                <span>
+                  <b>{group.name}</b>
+                  <small>{group.description || `${group.items.length} platform capabilities`}</small>
+                </span>
+                <ArrowUpRight size={15} />
+              </button>
+            ))}
+          </div>
+          <div className="mega-results-container">
+            <AnimatePresence mode="wait">
+              <motion.div 
+                className="mega-results" 
+                key={activeGroup.id} 
+                initial={{ opacity: 0, x: 8 }} 
+                animate={{ opacity: 1, x: 0 }} 
+                exit={{ opacity: 0, x: -8 }}
+                transition={{ duration: 0.2, ease: "easeOut" }}
+              >
+                <div className="mega-results-head">
+                  <span className="eyebrow">{activeGroup.name}</span>
+                  <span>{activeGroup.items.length} routes</span>
+                </div>
+                {activeGroup.items.map((item) => (
+                  <Link className="mega-item" key={item.route} to={item.route}>
+                    <span>
+                      <strong>{item.title}</strong>
+                      <small>{item.description}</small>
+                    </span>
+                    <ArrowUpRight size={15} />
+                  </Link>
+                ))}
+              </motion.div>
+            </AnimatePresence>
+          </div>
+        </div>
+      </div>
+    </motion.div>
+  )
 }
 
 function MobileMenu({ navItems }) {
   const [expanded, setExpanded] = useState(null)
-  return <motion.div className="mobile-menu" initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }}><div className="mobile-menu-inner">{navItems.map(([label, target]) => target.startsWith('/') ? <Link key={label} to={target}>{label}<ArrowUpRight size={15} /></Link> : <div className="mobile-nav-group" key={label}><button onClick={() => setExpanded(expanded === target ? null : target)} aria-expanded={expanded === target}>{label}<ChevronDown size={16} /></button>{expanded === target && <div className="mobile-subnav">{menuGroups[target].map((group) => <div key={group.id}><span>{group.name}</span>{group.items.slice(0, 5).map((item) => <Link key={item.route} to={item.route}>{item.title}<ArrowUpRight size={13} /></Link>)}</div>)}</div>}</div>)}<Link className="button" to="/contact">Talk to Sales <ArrowUpRight size={15} /></Link></div></motion.div>
+  return <motion.div className="mobile-menu" initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }} transition={{ duration: 0.3, ease: "easeOut" }}><div className="mobile-menu-inner">{navItems.map(([label, target]) => target.startsWith('/') ? <Link key={label} to={target}>{label}<ArrowUpRight size={15} /></Link> : <div className="mobile-nav-group" key={label}><button onClick={() => setExpanded(expanded === target ? null : target)} aria-expanded={expanded === target}>{label}<ChevronDown size={16} /></button>{expanded === target && <div className="mobile-subnav">{menuGroups[target].map((group) => <div key={group.id}><span>{group.name}</span>{group.items.slice(0, 5).map((item) => <Link key={item.route} to={item.route}>{item.title}<ArrowUpRight size={13} /></Link>)}</div>)}</div>}</div>)}<Link className="button" to="/contact">Talk to Sales <ArrowUpRight size={15} /></Link></div></motion.div>
 }
 
 function Footer() {
