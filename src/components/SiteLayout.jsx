@@ -200,10 +200,32 @@ function Footer() {
             <Link to="/contact">Contact</Link>
           </div>
           <div>
-            <span className="footer-label">Platform</span>
-            <Link to="/software/aeps">Banking software</Link>
+            <span className="footer-label">Softwares</span>
+            <Link to="/software/aeps">Banking Software</Link>
+            <Link to="/software/b2b-mobile-recharge">Recharge Software</Link>
+            <Link to="/software/verify-platform">Verification & CRM</Link>
+            <Link to="/software">View all Software</Link>
+          </div>
+          <div>
+            <span className="footer-label">API Solutions</span>
             <Link to="/api/recharge">Recharge APIs</Link>
-            <Link to="/api/verify-suite">Verification</Link>
+            <Link to="/api/verify-suite">Verification APIs</Link>
+            <Link to="/api/whatsapp-business">WhatsApp API</Link>
+            <Link to="/api">View all APIs</Link>
+          </div>
+          <div>
+            <span className="footer-label">Services</span>
+            <Link to="/services/web-development">Web Development</Link>
+            <Link to="/services/digital-marketing">Digital Marketing</Link>
+            <Link to="/services/ecommerce">E-Commerce</Link>
+            <Link to="/services">View all Services</Link>
+          </div>
+          <div>
+            <span className="footer-label">Industries</span>
+            <Link to="/industries/banking-fintech">Banking & Fintech</Link>
+            <Link to="/industries/retail">Retail & Merchant</Link>
+            <Link to="/industries/healthcare">Healthcare</Link>
+            <Link to="/industries">View all Industries</Link>
           </div>
           <div>
             <span className="footer-label">Contact</span>
@@ -221,8 +243,29 @@ function Footer() {
   )
 }
 
+function WhatsAppIcon({ size = 20 }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.83.48 3.53 1.4 5.01L2 22l5.25-1.38a9.86 9.86 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2Zm5.8 14.02c-.24.68-1.4 1.3-1.93 1.38-.49.08-1.11.11-1.79-.11-.41-.13-.94-.3-1.62-.6-2.85-1.23-4.71-4.1-4.85-4.29-.14-.19-1.17-1.55-1.17-2.96 0-1.4.74-2.09 1-2.38.26-.28.57-.35.76-.35.19 0 .38 0 .55.01.18.01.41-.07.64.49.24.58.81 2 .88 2.14.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.16-.29.36-.42.48-.14.13-.28.28-.12.55.16.28.71 1.17 1.52 1.9 1.04.94 1.92 1.23 2.19 1.37.28.14.44.12.6-.07.16-.19.68-.8.86-1.07.18-.28.36-.23.6-.14.24.09 1.55.73 1.82.87.27.14.45.21.51.32.07.12.07.66-.17 1.34Z" />
+    </svg>
+  )
+}
+
 function FloatingActions() {
-  return <div className="floating-actions">{site.phone && <a href={`tel:${site.phone}`} aria-label="Call NTSFINCO"><Phone size={17} /></a>}{site.whatsapp && <a href={`https://wa.me/${site.whatsapp}`} aria-label="Chat on WhatsApp" target="_blank" rel="noreferrer"><span>W</span></a>}</div>
+  return (
+    <div className="floating-actions">
+      {site.whatsapp && (
+        <a className="floating-action floating-whatsapp" href={`https://wa.me/${site.whatsapp}`} aria-label="Chat on WhatsApp" target="_blank" rel="noreferrer">
+          <WhatsAppIcon size={20} />
+        </a>
+      )}
+      {site.phone && (
+        <a className="floating-action floating-call" href={`tel:${site.phone}`} aria-label="Call NTSFINCO">
+          <Phone size={19} />
+        </a>
+      )}
+    </div>
+  )
 }
 
 function MouseFollower() {
