@@ -227,18 +227,59 @@ function FloatingActions() {
 
 function MouseFollower() {
   const [isDisabled, setIsDisabled] = useState(false);
-  
-  // Create motion values
+  const [hoveredText, setHoveredText] = useState('');
+  const [capsuleBelow, setCapsuleBelow] = useState(false);
   const mouseX = useMotionValue(-100);
   const mouseY = useMotionValue(-100);
-  
-  // Spring configuration for the dot (fast)
   const dotX = useSpring(mouseX, { stiffness: 1000, damping: 40, mass: 0.1 });
   const dotY = useSpring(mouseY, { stiffness: 1000, damping: 40, mass: 0.1 });
-  
-  // Spring configuration for the glow (delayed/smooth)
   const glowX = useSpring(mouseX, { stiffness: 150, damping: 20, mass: 0.5 });
   const glowY = useSpring(mouseY, { stiffness: 150, damping: 20, mass: 0.5 });
+
+  const getHoveredWord = (element, event) => {
+    if (!element) return '';
+
+    const caret = document.caretPositionFromPoint?.(event.clientX, event.clientY);
+    const range = document.caretRangeFromPoint?.(event.clientX, event.clientY);
+    let textNode = caret?.offsetNode || range?.startContainer;
+    let characterIndex = caret?.offset ?? range?.startOffset ?? -1;
+
+    if (textNode?.nodeType !== Node.TEXT_NODE || !element.contains(textNode)) {
+      const walker = document.createTreeWalker(element, NodeFilter.SHOW_TEXT);
+      let candidate;
+
+      while ((candidate = walker.nextNode())) {
+        const candidateText = candidate.textContent || '';
+        for (let index = 0; index < candidateText.length; index += 1) {
+          const characterRange = document.createRange();
+          characterRange.setStart(candidate, index);
+          characterRange.setEnd(candidate, index + 1);
+          const rect = characterRange.getBoundingClientRect();
+          if (event.clientX >= rect.left && event.clientX <= rect.right && event.clientY >= rect.top && event.clientY <= rect.bottom) {
+            textNode = candidate;
+            characterIndex = index;
+            break;
+          }
+        }
+
+        if (textNode === candidate) break;
+      }
+    }
+
+    if (textNode?.nodeType !== Node.TEXT_NODE || !element.contains(textNode)) return '';
+
+    const text = textNode.textContent || '';
+    characterIndex = Math.min(characterIndex, text.length - 1);
+    const wordPattern = /[\p{L}\p{N}_'-]/u;
+    if (characterIndex < 0 || !wordPattern.test(text[characterIndex])) return '';
+
+    let start = characterIndex;
+    let end = characterIndex + 1;
+    while (start > 0 && wordPattern.test(text[start - 1])) start -= 1;
+    while (end < text.length && wordPattern.test(text[end])) end += 1;
+
+    return text.slice(start, end);
+  };
 
   useEffect(() => {
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -251,6 +292,10 @@ function MouseFollower() {
     const move = (e) => {
       mouseX.set(e.clientX);
       mouseY.set(e.clientY);
+
+      const textElement = e.target.closest?.('h1, h2, h3, h4, h5, h6, p, li, span, a, button, small, strong, em, label, td, th, blockquote, figcaption, legend, dt, dd');
+      setHoveredText(getHoveredWord(textElement, e));
+      setCapsuleBelow(e.clientY < 110);
     };
 
     window.addEventListener('pointermove', move);
@@ -261,9 +306,8 @@ function MouseFollower() {
 
   return (
     <>
-      {/* Ambient Glow */}
       <motion.div 
-        className="fixed top-0 left-0 w-[400px] h-[400px] rounded-full pointer-events-none z-[9998] mix-blend-screen"
+        className={`fixed top-0 left-0 w-[400px] h-[400px] rounded-full pointer-events-none z-[9998] mix-blend-screen transition-opacity duration-200 ${hoveredText ? 'opacity-0' : 'opacity-100'}`}
         style={{
           x: glowX,
           y: glowY,
@@ -273,9 +317,8 @@ function MouseFollower() {
         }}
         aria-hidden="true" 
       />
-      {/* Cursor Dot */}
       <motion.div 
-        className="fixed top-0 left-0 w-4 h-4 rounded-full bg-white pointer-events-none z-[9999] mix-blend-difference"
+        className={`fixed top-0 left-0 w-4 h-4 rounded-full bg-white pointer-events-none z-[9999] mix-blend-difference transition-opacity duration-150 ${hoveredText ? 'opacity-0' : 'opacity-100'}`}
         style={{
           x: dotX,
           y: dotY,
@@ -284,6 +327,27 @@ function MouseFollower() {
         }}
         aria-hidden="true" 
       />
+      <motion.div
+        className={`text-hover-capsule ${hoveredText ? 'is-visible' : ''} ${capsuleBelow ? 'is-below' : ''}`}
+        style={{ x: mouseX, y: mouseY, translateX: '-50%', translateY: capsuleBelow ? '26px' : 'calc(-100% - 22px)' }}
+        initial={false}
+        animate={{ opacity: hoveredText ? 1 : 0, scale: hoveredText ? 1 : 0.5 }}
+        transition={{ type: 'spring', stiffness: 500, damping: 26, mass: 0.4 }}
+        aria-hidden="true"
+      >
+        <AnimatePresence mode="popLayout" initial={false}>
+          <motion.span
+            key={hoveredText}
+            className="capsule-word"
+            initial={{ opacity: 0, scale: 0.4, filter: 'blur(4px)' }}
+            animate={{ opacity: 1, scale: 1, filter: 'blur(0px)' }}
+            exit={{ opacity: 0, scale: 0.4, filter: 'blur(4px)' }}
+            transition={{ type: 'spring', stiffness: 600, damping: 30, mass: 0.4 }}
+          >
+            {hoveredText}
+          </motion.span>
+        </AnimatePresence>
+      </motion.div>
     </>
   );
 }
