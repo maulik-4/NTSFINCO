@@ -71,7 +71,7 @@ function InfrastructureGraph() {
             {index < nodes.length - 1 && (
               <motion.div 
                 className="absolute w-1.5 h-1.5 rounded-full bg-blue z-10"
-                style={{ left: '42px', top: '100%' }}
+                style={{ left: '50%', marginLeft: '-3px', top: '100%' }}
                 animate={{ top: ['0%', '150%'], opacity: [0, 1, 0] }}
                 transition={{ 
                   duration: 1.5, 

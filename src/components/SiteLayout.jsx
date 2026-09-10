@@ -174,7 +174,7 @@ function Footer() {
       <div className="footer-top" style={{ flexWrap: 'wrap' }}>
         <div style={{ maxWidth: '300px' }}>
           <Link className="brand" to="/">
-            <img src="/icon.png" alt="NTSFINCO Logo" style={{ height: '52px', width: 'auto', objectFit: 'contain' }} />
+            <img src="/icon.png" alt="NTSFINCO Logo" style={{ height: '52px', width: 'auto', objectFit: 'contain', background: '#fff', padding: '6px', borderRadius: '6px' }} />
           </Link>
           <p className="footer-note" style={{ marginBottom: '15px' }}>
             The infrastructure layer for teams building connected financial products.
@@ -275,7 +275,7 @@ function MouseFollower() {
       />
       {/* Cursor Dot */}
       <motion.div 
-        className="fixed top-0 left-0 w-1.5 h-1.5 rounded-full bg-blue pointer-events-none z-[9999]"
+        className="fixed top-0 left-0 w-4 h-4 rounded-full bg-white pointer-events-none z-[9999] mix-blend-difference"
         style={{
           x: dotX,
           y: dotY,

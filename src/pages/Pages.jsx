@@ -115,9 +115,9 @@ function CatalogPage({ type }) {
             <SectionIntro eyebrow="KEY FEATURES" title="Capabilities that drive results." />
             <div className="feature-list" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '1.5rem', marginTop: '2rem' }}>
               {content.features.map((feature, index) => (
-                <motion.div key={index} initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.3, delay: index * 0.1, ease: "easeOut" }} style={{ background: 'rgba(255,255,255,0.05)', padding: '1.5rem', borderRadius: '8px' }}>
+                <motion.div key={index} initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.3, delay: index * 0.1, ease: "easeOut" }} style={{ background: '#fff', border: '1px solid var(--line)', padding: '1.5rem', borderRadius: '8px' }}>
                   <span style={{ display: 'block', marginBottom: '1rem', color: 'var(--blue)' }}><Code2 size={24} /></span>
-                  <p style={{ margin: 0, fontWeight: 500, lineHeight: 1.5, color: '#fff' }}>{feature}</p>
+                  <p style={{ margin: 0, fontWeight: 500, lineHeight: 1.5, color: 'var(--ink)', fontSize: '13px' }}>{feature}</p>
                 </motion.div>
               ))}
             </div>
