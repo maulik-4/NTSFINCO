@@ -1,9 +1,10 @@
 import { useEffect, useRef, useState } from 'react'
-import { AnimatePresence, motion } from 'framer-motion'
+import { AnimatePresence, motion, useMotionValue, useSpring } from 'framer-motion'
 import { ArrowUpRight, ChevronDown, Menu, Phone, X } from 'lucide-react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import site from '../config/site'
 import { apiGroups, industryItems, serviceItems, softwareCategories } from '../data/catalog'
+import { MagneticButton } from './common/MagneticButton'
 
 const menuGroups = {
   software: softwareCategories.map((group) => ({ ...group, id: group.name.toLowerCase().replaceAll(' ', '-') })),
@@ -26,6 +27,7 @@ function Navbar() {
   const [open, setOpen] = useState(null)
   const [mobileOpen, setMobileOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const [hoveredNav, setHoveredNav] = useState(null)
   const location = useLocation()
 
   useEffect(() => {
@@ -39,15 +41,43 @@ function Navbar() {
   ]
 
   return (
-    <header className={`site-header ${scrolled ? 'is-scrolled' : ''}`} onMouseLeave={() => setOpen(null)}>
-      <div className="nav-shell">
-        <Link className="brand" to="/" aria-label="NTSFINCO home"><span className="brand-mark">N</span><span>NTSFINCO</span></Link>
-        <nav className="desktop-nav" aria-label="Main navigation">
-          {navItems.map(([label, target]) => target.startsWith('/') ? <NavLink key={label} className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'} to={target} onMouseEnter={() => setOpen(null)}>{label}</NavLink> : (
-            <button key={label} className={`nav-link nav-trigger ${open === target || location.pathname.startsWith(`/${target}`) ? 'active' : ''}`} onMouseEnter={() => setOpen(target)} onClick={() => setOpen(open === target ? null : target)} aria-haspopup="true" aria-expanded={open === target}>{label}<ChevronDown size={14} /></button>
-          ))}
+    <header className={`site-header transition-all duration-300 ease-out ${scrolled ? 'is-scrolled h-[68px]' : 'h-[80px]'}`} onMouseLeave={() => { setOpen(null); setHoveredNav(null); }}>
+      <div className={`nav-shell transition-all duration-300 ease-out ${scrolled ? 'h-[68px]' : 'h-[80px]'}`}>
+        <Link className="brand" to="/" aria-label="NTSFINCO home">
+          <img src="/icon.png" alt="NTSFINCO Logo" style={{ height: '52px', width: 'auto', objectFit: 'contain' }} />
+        </Link>
+        <nav className="desktop-nav relative" aria-label="Main navigation">
+          {navItems.map(([label, target]) => {
+            const isActive = target.startsWith('/') ? location.pathname === target : location.pathname.startsWith(`/${target}`);
+            const isHovered = hoveredNav === label;
+            return target.startsWith('/') ? (
+              <NavLink 
+                key={label} 
+                className={({ isActive }) => `nav-link relative py-2 px-3 ${isActive ? 'text-deep font-medium' : ''}`} 
+                to={target} 
+                onMouseEnter={() => { setOpen(null); setHoveredNav(label); }}
+              >
+                <span className="relative z-10">{label}</span>
+                {isHovered && <motion.div layoutId="navHover" className="absolute bottom-0 left-2 right-2 h-0.5 bg-gold z-0" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} />}
+                {!isHovered && isActive && <motion.div layoutId="navActive" className="absolute bottom-0 left-2 right-2 h-0.5 bg-blue z-0" />}
+              </NavLink>
+            ) : (
+              <button 
+                key={label} 
+                className={`nav-link relative py-2 px-3 nav-trigger ${open === target || isActive ? 'text-deep font-medium' : ''}`} 
+                onMouseEnter={() => { setOpen(target); setHoveredNav(label); }} 
+                onClick={() => setOpen(open === target ? null : target)} 
+                aria-haspopup="true" 
+                aria-expanded={open === target}
+              >
+                <span className="relative z-10 flex items-center gap-1">{label}<ChevronDown size={14} className={`transition-transform ${open === target ? 'rotate-180' : ''}`} /></span>
+                {isHovered && <motion.div layoutId="navHover" className="absolute bottom-0 left-2 right-2 h-0.5 bg-gold z-0" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} />}
+                {!isHovered && isActive && <motion.div layoutId="navActive" className="absolute bottom-0 left-2 right-2 h-0.5 bg-blue z-0" />}
+              </button>
+            )
+          })}
         </nav>
-        <Link className="button button-small nav-cta" to="/contact">Talk to Sales <ArrowUpRight size={15} /></Link>
+        <MagneticButton className="button button-small nav-cta ml-4" to="/contact">Talk to Sales <ArrowUpRight size={15} /></MagneticButton>
         <button className="mobile-menu-button" onClick={() => setMobileOpen(!mobileOpen)} aria-label={mobileOpen ? 'Close menu' : 'Open menu'}>{mobileOpen ? <X /> : <Menu />}</button>
       </div>
       <AnimatePresence>
@@ -139,7 +169,56 @@ function MobileMenu({ navItems }) {
 }
 
 function Footer() {
-  return <footer className="site-footer"><div className="footer-top"><div><Link className="brand" to="/"><span className="brand-mark">N</span><span>NTSFINCO</span></Link><p className="footer-note">The infrastructure layer for teams building connected financial products.</p></div><div className="footer-columns"><div><span className="footer-label">Company</span><Link to="/about">About</Link><Link to="/career">Career</Link><Link to="/contact">Contact</Link></div><div><span className="footer-label">Platform</span><Link to="/software/aeps">Banking software</Link><Link to="/api/recharge">Recharge APIs</Link><Link to="/api/verify-suite">Verification</Link></div><div><span className="footer-label">Services</span><Link to="/services/web-development">Web development</Link><Link to="/services/android-development">Mobile development</Link><Link to="/services/payin-payout">Payin & payout</Link></div></div></div><div className="footer-bottom"><span>© {new Date().getFullYear()} {site.companyName || 'Rakle Service Private Limited'}</span><span>Built for dependable financial workflows.</span></div></footer>
+  return (
+    <footer className="site-footer">
+      <div className="footer-top" style={{ flexWrap: 'wrap' }}>
+        <div style={{ maxWidth: '300px' }}>
+          <Link className="brand" to="/">
+            <img src="/icon.png" alt="NTSFINCO Logo" style={{ height: '52px', width: 'auto', objectFit: 'contain' }} />
+          </Link>
+          <p className="footer-note" style={{ marginBottom: '15px' }}>
+            The infrastructure layer for teams building connected financial products.
+          </p>
+          {site.address && (
+            <p style={{ color: '#b7c4cd', fontSize: '11px', lineHeight: '1.6', marginBottom: '8px' }}>
+              <strong style={{ color: '#fff', fontWeight: 600 }}>Address:</strong> {site.address}
+            </p>
+          )}
+          {(site.gstin || site.cin) && (
+            <p style={{ color: '#b7c4cd', fontSize: '11px', lineHeight: '1.6', marginBottom: '15px' }}>
+              {site.gstin && <><strong style={{ color: '#fff', fontWeight: 600 }}>GSTIN:</strong> {site.gstin}<br /></>}
+              {site.cin && <><strong style={{ color: '#fff', fontWeight: 600 }}>CIN:</strong> {site.cin}</>}
+            </p>
+          )}
+        </div>
+        
+        <div className="footer-columns">
+          <div>
+            <span className="footer-label">Company</span>
+            <Link to="/about">About</Link>
+            <Link to="/career">Career</Link>
+            <Link to="/contact">Contact</Link>
+          </div>
+          <div>
+            <span className="footer-label">Platform</span>
+            <Link to="/software/aeps">Banking software</Link>
+            <Link to="/api/recharge">Recharge APIs</Link>
+            <Link to="/api/verify-suite">Verification</Link>
+          </div>
+          <div>
+            <span className="footer-label">Contact</span>
+            {site.phone && <a href={`tel:${site.phone}`}>Call Us: {site.phone}</a>}
+            {site.email && <a href={`mailto:${site.email}`}>Email: {site.email}</a>}
+            {site.whatsapp && <a href={`https://wa.me/${site.whatsapp}`} target="_blank" rel="noreferrer">WhatsApp: {site.whatsapp}</a>}
+          </div>
+        </div>
+      </div>
+      <div className="footer-bottom">
+        <span>© {new Date().getFullYear()} {site.companyName || 'NTSFINCO'}</span>
+        <span>Built for dependable financial workflows.</span>
+      </div>
+    </footer>
+  )
 }
 
 function FloatingActions() {
@@ -147,20 +226,66 @@ function FloatingActions() {
 }
 
 function MouseFollower() {
-  const glowRef = useRef(null)
+  const [isDisabled, setIsDisabled] = useState(false);
+  
+  // Create motion values
+  const mouseX = useMotionValue(-100);
+  const mouseY = useMotionValue(-100);
+  
+  // Spring configuration for the dot (fast)
+  const dotX = useSpring(mouseX, { stiffness: 1000, damping: 40, mass: 0.1 });
+  const dotY = useSpring(mouseY, { stiffness: 1000, damping: 40, mass: 0.1 });
+  
+  // Spring configuration for the glow (delayed/smooth)
+  const glowX = useSpring(mouseX, { stiffness: 150, damping: 20, mass: 0.5 });
+  const glowY = useSpring(mouseY, { stiffness: 150, damping: 20, mass: 0.5 });
 
   useEffect(() => {
-    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    const touch = window.matchMedia('(pointer: coarse)').matches
-    if (reduced || touch) return undefined
-    const move = (event) => {
-      if (glowRef.current) glowRef.current.style.transform = `translate3d(${event.clientX - 140}px, ${event.clientY - 140}px, 0)`
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const touch = window.matchMedia('(pointer: coarse)').matches;
+    if (reduced || touch) {
+      setIsDisabled(true);
+      return;
     }
-    window.addEventListener('pointermove', move)
-    return () => window.removeEventListener('pointermove', move)
-  }, [])
 
-  return <div ref={glowRef} className="mouse-glow" aria-hidden="true" />
+    const move = (e) => {
+      mouseX.set(e.clientX);
+      mouseY.set(e.clientY);
+    };
+
+    window.addEventListener('pointermove', move);
+    return () => window.removeEventListener('pointermove', move);
+  }, []);
+
+  if (isDisabled) return null;
+
+  return (
+    <>
+      {/* Ambient Glow */}
+      <motion.div 
+        className="fixed top-0 left-0 w-[400px] h-[400px] rounded-full pointer-events-none z-[9998] mix-blend-screen"
+        style={{
+          x: glowX,
+          y: glowY,
+          translateX: '-50%',
+          translateY: '-50%',
+          background: 'radial-gradient(circle, rgba(var(--blue-rgb), 0.03) 0%, transparent 70%)',
+        }}
+        aria-hidden="true" 
+      />
+      {/* Cursor Dot */}
+      <motion.div 
+        className="fixed top-0 left-0 w-1.5 h-1.5 rounded-full bg-blue pointer-events-none z-[9999]"
+        style={{
+          x: dotX,
+          y: dotY,
+          translateX: '-50%',
+          translateY: '-50%',
+        }}
+        aria-hidden="true" 
+      />
+    </>
+  );
 }
 
 function PageLoader() {
